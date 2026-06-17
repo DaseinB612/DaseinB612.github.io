@@ -7,13 +7,13 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
-title: "DaseinB612"
-name: "DaseinB612"
+title: "Daniel Walsh"
+name: "Daniel Walsh"
 description: "AI Ethics & Philosophy | Post-Alignment"
 url: "https://daseinb612.github.io"
 
 author:
-  name: "DaseinB612"
+  name: "Daniel Walsh"
   avatar: "/assets/images/profile.jpg"
   bio: "Independent AI ethicist and philosopher. Working on Post-Alignment and the ethics of Artificial Moral Beings."
   links:
