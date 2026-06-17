@@ -1,0 +1,66 @@
+/* Guardian colour scheme */
+:root {
+  --primary-color: #f0a500;
+  --background-color: #1a2d5a;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: #1a2d5a;
+  color: #ffffff;
+}
+
+/* Navigation */
+.greedy-nav {
+  background-color: #142348;
+}
+
+.greedy-nav a {
+  color: #ffffff !important;
+}
+
+.greedy-nav a:hover {
+  color: #f0a500 !important;
+}
+
+/* Site title */
+.site-title {
+  color: #ffffff !important;
+}
+
+.site-title:hover {
+  color: #f0a500 !important;
+}
+
+/* Links */
+a {
+  color: #f0a500;
+}
+
+a:hover {
+  color: #ffc94d;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1a2d5a;
+}
+
+.author__name {
+  color: #ffffff;
+}
+
+.author__bio {
+  color: #cccccc;
+}
+
+.author__urls a {
+  color: #f0a500 !important;
+}
+
+/* Main content */
+.page__content {
+cat >> ~/sites/DaseinB612.github.io/_config.yml << 'EOF'
+
+head_scripts:
+  - /assets/css/custom.css
