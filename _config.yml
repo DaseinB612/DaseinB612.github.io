@@ -29,5 +29,8 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/DaseinB612"
+    - label: "CV"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/Daniel_Walsh_CV_2026.pdf"
 
 permalink: /:categories/:title/
