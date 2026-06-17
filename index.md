@@ -2,8 +2,9 @@
 layout: home
 author_profile: true
 header:
-  overlay_color: "#1a1a2e"
+  overlay_color: "#142348"
   overlay_filter: 0.5
+  show_overlay_excerpt: true
 excerpt: "Independent AI Ethicist working on genuine ethical robustness in frontier AI systems"
 ---
 
