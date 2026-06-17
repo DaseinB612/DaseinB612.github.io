@@ -20,11 +20,14 @@ author:
     - label: "Reddit"
       icon: "fab fa-fw fa-reddit"
       url: "https://reddit.com/u/dracollavenore"
+    - label: "Substack"
+      icon: "fas fa-fw fa-envelope"
+      url: "https://postalignment.substack.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/b612-dasein/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/DaseinB612"
 
 permalink: /:categories/:title/
-
-navigation:
-  - title: "About"
-    url: /about/
-  - title: "Projects"
-    url: /projects/
