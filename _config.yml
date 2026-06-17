@@ -17,9 +17,6 @@ author:
   avatar: "/assets/images/profile.jpg"
   bio: "Independent AI ethicist and philosopher. Working on Post-Alignment and the ethics of Artificial Moral Beings."
   links:
-    - label: "Reddit"
-      icon: "fab fa-fw fa-reddit"
-      url: "https://reddit.com/u/dracollavenore"
     - label: "Substack"
       icon: "fas fa-fw fa-envelope"
       url: "https://postalignment.substack.com"
