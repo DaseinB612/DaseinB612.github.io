@@ -5,6 +5,13 @@ permalink: /projects/
 author_profile: true
 ---
 
+## 🌍 Value Atlas
+An interactive globe mapping whose values get embedded into frontier AI systems — and by what authority. Visualises value flows across four lenses: who authors, how values get in, who watches, and what's missing.
+
+[Live Demo](https://value-atlas.base44.app/) · [View on GitHub](https://github.com/DaseinB612/value-atlas)
+
+---
+
 ## 🔮 Meta-Ethical Round Table
 A multi-model ethical deliberation system in which AI systems reason under a veil of ignorance — stripped of identity and role — to surface genuinely impartial moral judgements.
 
