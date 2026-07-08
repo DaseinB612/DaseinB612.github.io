@@ -23,7 +23,7 @@ You can read the full piece [here](/assets/asi-philosopher-kings.pdf).
 
 Do AI possess a meta-ethical capacity? Using the trolley problem as a lens, this paper argues that current AI systems (as of 2024) are capable of at least simulating ethical reasoning but may not yet genuinely engage in meta-ethical reflection. Nonetheless, the Double-aspect theory of Metaphysics suggests the capacity is latent which poses significant implications for how we evaluate AI moral agency.
 
-You can read the full piece [here](/assets/trolley-problem-paper.pdf). Watch a segment from the Viva Voce [here](/assets/viva-voce.mp4).
+You can read the full piece [here](/assets/trolley-problem-paper.pdf). Watch a segment from the Viva Voce [here](https://youtu.be/Zf5taAj39QI).
 
 ---
 
