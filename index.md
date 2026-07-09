@@ -32,96 +32,102 @@ I have spent time as a Monk Intern at Quarr Abbey studying AI and lived religios
 
 ## Academic Background
 
-<div style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+<div style="display:flex; flex-direction:column; gap:8px; margin-top:12px;">
 
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/bluedot.jpeg" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">Technical AI Safety</strong> <span style="background:#f0a500; color:#1a2d5a; border-radius:4px; padding:2px 8px; font-size:0.75em; font-weight:bold; margin-left:8px;">In Progress</span><br>
-<span style="color:#f0a500;">BlueDot Impact</span><br>
-Working through BlueDot Impact's technical course on AI safety: alignment techniques, interpretability, scalable oversight, and the challenges of building safe and reliable AI systems.
-</div>
-</div>
-
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/lens.png" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">AI Risk Fundamentals</strong> <span style="background:#f0a500; color:#1a2d5a; border-radius:4px; padding:2px 8px; font-size:0.75em; font-weight:bold; margin-left:8px;">In Progress</span><br>
-<span style="color:#f0a500;">Lens Academy</span><br>
-Working through Lens Academy's AI Risk Fundamentals with a focus on discussion surrounding <em>If Anyone Builds It, Everyone Dies</em>. Navigator: <a href="https://mmulet.com/">Michael Mulet</a>
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/bluedot.jpeg" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">Technical AI Safety</strong> <span style="background:#f0a500; color:#1a2d5a; border-radius:4px; padding:1px 6px; font-size:0.7em; font-weight:bold; margin-left:6px;">In Progress</span><br>
+<span style="color:#f0a500; font-size:0.82em;">BlueDot Impact</span><br>
+<span style="font-size:0.82em;">Alignment techniques, interpretability, scalable oversight, and the challenges of building safe and reliable AI systems.</span>
 </div>
 </div>
 
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/bluedot.jpeg" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">Frontier AI Governance Course</strong><br>
-<span style="color:#f0a500;">BlueDot Impact</span><br>
-Completed BlueDot Impact's course on frontier AI governance: policy frameworks, regulatory approaches, international coordination, and the governance challenges posed by rapidly advancing AI capabilities. Facilitator: Suchet Mittal
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/lens.png" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">AI Risk Fundamentals</strong> <span style="background:#f0a500; color:#1a2d5a; border-radius:4px; padding:1px 6px; font-size:0.7em; font-weight:bold; margin-left:6px;">In Progress</span><br>
+<span style="color:#f0a500; font-size:0.82em;">Lens Academy</span><br>
+<span style="font-size:0.82em;">Focus on <em>If Anyone Builds It, Everyone Dies</em>. Navigator: <a href="https://mmulet.com/">Michael Mulet</a></span>
 </div>
 </div>
 
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/bluedot.jpeg" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">AGI Strategy Course</strong><br>
-<span style="color:#f0a500;">BlueDot Impact</span><br>
-Completed BlueDot Impact's intensive course on strategic thinking for advanced AI systems: governance, organizational readiness, and decision-making under uncertainty as capabilities scale.
-</div>
-</div>
-
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/bremen.png" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">M.A. Angewandte Philosophie (4.0 GPA)</strong><br>
-<span style="color:#f0a500;">Universität Bremen</span><br>
-Masters in Applied Philosophy with a focus on AI Ethics.
-</div>
-</div>
-
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/tsinghua.webp" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">B.A. Philosophy (Outstanding Thesis Award)</strong><br>
-<span style="color:#f0a500;">Tsinghua University</span><br>
-Bachelors in Philosophy with a specialization in Ethics.
-</div>
-</div>
-
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/pku.webp" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">Visiting Scholar</strong><br>
-<span style="color:#f0a500;">Peking University</span><br>
-Visiting Scholar at Peking University, auditing courses in Philosophy.
-</div>
-</div>
-
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/oxford.svg" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">Exchange Student</strong><br>
-<span style="color:#f0a500;">Regent's Park College, Oxford</span><br>
-Exchange Student (英华学者) at the University of Oxford, participating in Tutorials with Kate Kirkpatrick.
-</div>
-</div>
-
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/deepsprings.jpeg" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">Student</strong><br>
-<span style="color:#f0a500;">Deep Springs College</span><br>
-Audited courses at Deep Springs College.
-</div>
-</div>
-
-<div style="display:flex; align-items:flex-start; background:#1e3366; border-radius:10px; padding:16px; gap:16px;">
-<img src="/assets/images/outercoast.png" style="width:80px; height:80px; object-fit:contain; border-radius:8px; flex-shrink:0;">
-<div>
-<strong style="font-size:1em;">Student</strong><br>
-<span style="color:#f0a500;">Outer Coast College</span><br>
-Audited courses at Outer Coast College.
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/bluedot.jpeg" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">Frontier AI Governance Course</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">BlueDot Impact</span><br>
+<span style="font-size:0.82em;">Policy frameworks, regulatory approaches, international coordination. Facilitator: Suchet Mittal</span>
 </div>
 </div>
 
 </div>
+
+<div id="more-education" style="display:none; flex-direction:column; gap:8px; margin-top:8px;">
+
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/bluedot.jpeg" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">AGI Strategy Course</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">BlueDot Impact</span><br>
+<span style="font-size:0.82em;">Strategic thinking for advanced AI systems: governance, organizational readiness, and decision-making under uncertainty.</span>
+</div>
+</div>
+
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/bremen.png" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">M.A. Angewandte Philosophie (4.0 GPA)</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">Universität Bremen</span><br>
+<span style="font-size:0.82em;">Masters in Applied Philosophy with a focus on AI Ethics.</span>
+</div>
+</div>
+
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/tsinghua.webp" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">B.A. Philosophy (Outstanding Thesis Award)</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">Tsinghua University</span><br>
+<span style="font-size:0.82em;">Bachelors in Philosophy with a specialization in Ethics.</span>
+</div>
+</div>
+
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/pku.webp" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">Visiting Scholar</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">Peking University</span><br>
+<span style="font-size:0.82em;">Auditing courses in Philosophy.</span>
+</div>
+</div>
+
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/oxford.svg" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">Exchange Student</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">Regent's Park College, Oxford</span><br>
+<span style="font-size:0.82em;">Exchange Student (英华学者), Tutorials with Kate Kirkpatrick.</span>
+</div>
+</div>
+
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/deepsprings.jpeg" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">Student</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">Deep Springs College</span><br>
+<span style="font-size:0.82em;">Audited courses at Deep Springs College.</span>
+</div>
+</div>
+
+<div style="display:flex; align-items:center; background:#1e3366; border-radius:8px; padding:10px 14px; gap:12px;">
+<img src="/assets/images/outercoast.png" style="width:44px; height:44px; object-fit:contain; border-radius:6px; flex-shrink:0;">
+<div style="flex:1;">
+<strong style="font-size:0.9em;">Student</strong><br>
+<span style="color:#f0a500; font-size:0.82em;">Outer Coast College</span><br>
+<span style="font-size:0.82em;">Audited courses at Outer Coast College.</span>
+</div>
+</div>
+
+</div>
+
+<button onclick="var el=document.getElementById('more-education'); if(el.style.display==='none'){el.style.display='flex';this.textContent='Show less';}else{el.style.display='none';this.textContent='Show more';}" style="margin-top:10px; background:none; border:1px solid #f0a500; color:#f0a500; padding:6px 16px; border-radius:6px; cursor:pointer; font-size:0.85em;">Show more</button>
