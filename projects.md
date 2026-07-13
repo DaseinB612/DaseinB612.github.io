@@ -22,7 +22,7 @@ An ethics-first alignment benchmark that stress-tests alignment proposals agains
 ## 🔮 Meta-Ethical Round Table
 A multi-model ethical deliberation system in which AI systems reason under a veil of ignorance — stripped of identity and role — to surface genuinely impartial moral judgements.
 
-[View on GitHub](https://github.com/DaseinB612/meta-ethical-round-table)
+[Live Demo](https://ethos-round-table.base44.app) · [View on GitHub](https://github.com/DaseinB612/meta-ethical-round-table)
 
 ---
 
