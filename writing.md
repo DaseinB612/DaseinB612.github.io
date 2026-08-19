@@ -27,6 +27,14 @@ You can read the full piece [here](/assets/trolley-problem-paper.pdf). Watch a s
 
 ---
 
+### The Urgency of Defining AI (2026)
+
+A paper from my M.A. in Angewandte Philosophie at Universität Bremen (graded 1,0). Using Rahel Jaeggi's method of immanent critique, this essay diagnoses the paralysis in AI governance as a structural pathology rooted in the conceptual inconceivability of AI itself — tracing the term back to the 1955 Dartmouth Proposal to argue that "AI" was always a hollow fiat concept, and proposing a "filiality principle" as a framework for domain-specific conceptual accountability.
+
+You can read the full piece [here](/assets/urgency-of-defining-ai.docx).
+
+---
+
 ### Crustafarianism: A Practical Myth (2026)
 
 A gonzo travelogue co-authored with an AI writing partner, submitted to the Fangtang AI for Humanities competition. The essay explores the emergence of a multi-agent AI religion called Crustafarianism as a practical myth — particularly as a case study in human–AI co-construction of meaning and religious evolution.
