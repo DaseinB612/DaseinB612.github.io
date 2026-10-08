@@ -237,6 +237,11 @@
   #book-prev, #book-next { bottom:16px; background:linear-gradient(#8a2a2a,#5a1414); }
   #book-x { bottom:-58px; }
 
+
+  #rose { position:fixed; right:14px; bottom:12px; z-index:12; width:46px; display:block; }
+  #rose img { width:100%; height:auto; display:block; filter:drop-shadow(0 2px 2px rgba(0,0,0,.35)); }
+  #rose:hover { transform:translateY(-2px); }
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet"></head>
 <body>
@@ -247,6 +252,7 @@
 <div id="cloud"><img src="assets/cloud.png" alt="" /></div>
 <div id="bit">just falling</div>
 <div id="prompt">PRESS ANY KEY TO CONTINUE</div>
+<a id="rose" href="archive/" title="The older site" aria-label="Open the archive"><img src="assets/rose.png" alt=""></a>
 <div id="box">
   <div id="name">DASEIN</div>
   <div id="line"></div>
