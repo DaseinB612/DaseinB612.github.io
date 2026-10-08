@@ -151,6 +151,25 @@
   #chapters a.ribbon:hover { filter:brightness(1.08); }
   @media (max-width:720px) { #tome { grid-template-columns:1fr; height:auto; } #tome .spine { display:none; } #tome h2 { font-size:42px; } }
 
+
+  #tome.badges { width:min(980px, calc(100% - 28px)); height:min(80vh, 580px); display:block; position:relative; background:transparent; border:0; box-shadow:none; padding:0; }
+  #tome .spread { height:100%; display:grid; grid-template-columns:1fr 16px 1fr; }
+  #tome .page { background: radial-gradient(circle at 30% 20%, #fff6e4, #efd7aa 72%); color:#3a2a16; padding:22px 18px; overflow:auto; }
+  #tome .page.left { border-radius:18px 0 0 18px; box-shadow: inset -14px 0 18px rgba(90,55,20,.12), 0 0 0 8px #d4b15a, 0 0 0 12px #6a4a1c; }
+  #tome .page.right { border-radius:0 18px 18px 0; box-shadow: inset 14px 0 18px rgba(90,55,20,.12), 0 0 0 8px #d4b15a, 0 0 0 12px #6a4a1c; }
+  #tome .spine { background: linear-gradient(#c4a15a, #6a4a1c 45%, #c4a15a); }
+  #tome .kicker { font-family:Georgia, serif; letter-spacing:.14em; font-size:13px; text-transform:uppercase; color:#8a7044; margin:0 0 12px; text-align:center; }
+  #tome h2 { font-family:Georgia, serif; font-size:58px; line-height:.9; color:#5a3d18; text-align:center; margin:24px 0; }
+  #tome .grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px 8px; }
+  #tome .badge { display:flex; flex-direction:column; align-items:center; text-align:center; text-decoration:none; color:#3a2a16; font-family:Georgia, serif; }
+  #tome .badge b, #tome .badge img { width:64px; height:64px; border-radius:50%; border:3px solid #d4b15a; background:#fff8ea; display:grid; place-items:center; font-size:22px; object-fit:cover; }
+  #tome .badge span { margin-top:6px; font-size:13px; line-height:1.2; }
+  #book-prev, #book-next, #book-x { position:absolute; z-index:2; border:3px solid #d4b15a; background:#6a1f1f; color:#f4e7c8; font-size:28px; width:42px; height:42px; cursor:pointer; }
+  #book-prev { left:-8px; bottom:18px; }
+  #book-next { right:-8px; bottom:18px; }
+  #book-x { left:50%; bottom:-54px; transform:translateX(-50%); border-radius:6px; }
+  @media (max-width:720px) { #tome .spread { grid-template-columns:1fr; } #tome .spine { display:none; } #tome h2 { font-size:40px; } }
+
 </style>
 </head>
 <body>
@@ -171,24 +190,101 @@
   </div>
 </div>
 <div id="journal">
-  <div id="tome">
-    <div class="page left">
-      <p class="kicker">The log so far</p>
-      <div id="chapters">
-        <a class="ribbon navy" href="#story">Story <i>I</i></a>
-        <a class="ribbon gold" href="#writings">Writings <i>II</i></a>
-        <a class="ribbon dusk" href="#projects">Projects <i>III</i></a>
-        <a class="ribbon ink" href="archive/">(Archived) <i>IV</i></a>
+  <div id="tome" class="badges">
+    <div class="spread">
+      <div class="page left">
+        <p class="kicker">The log so far</p>
+        <div id="chapters">
+          <a class="ribbon navy" href="#story">Story <i>I</i></a>
+          <a class="ribbon gold" href="#writings">Writings <i>II</i></a>
+          <a class="ribbon dusk" href="#projects">Projects <i>III</i></a>
+          <a class="ribbon ink" href="archive/">(Archived) <i>IV</i></a>
+        </div>
+      </div>
+      <div class="spine"></div>
+      <div class="page right">
+        <p class="kicker">Open the page</p>
+        <h2>Dasein's<br>Book<br>of Logs</h2>
       </div>
     </div>
-    <div class="spine"></div>
-    <div class="page right">
-      <p class="kicker">Open the page</p>
-      <h2>Dasein's<br>Book<br>of Logs</h2>
-      <p class="sub">A few old shelves. The chapters get filled in later.</p>
+    <div class="spread" hidden>
+      <div class="page left">
+        <p class="kicker">Reach me</p>
+        <div class="grid">
+          <a class="badge" href="mailto:t.walshdaniel@protonmail.com"><b>@</b><span>Email</span></a>
+          <a class="badge" href="https://postalignment.substack.com"><b>Ss</b><span>Substack</span></a>
+          <a class="badge" href="https://www.linkedin.com/in/b612-dasein/"><b>in</b><span>LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="spine"></div>
+      <div class="page right">
+        <p class="kicker">Reach me</p>
+        <div class="grid">
+          <a class="badge" href="https://reddit.com/u/dracollavenore"><b>r</b><span>Reddit</span></a>
+          <a class="badge" href="archive/assets/Daniel_Walsh_CV_2026.pdf"><b>CV</b><span>Curriculum</span></a>
+          <a class="badge" href="https://github.com/DaseinB612"><b>Gh</b><span>GitHub</span></a>
+        </div>
+      </div>
     </div>
+    <div class="spread" hidden>
+      <div class="page left">
+        <p class="kicker">Schools</p>
+        <div class="grid">
+          <a class="badge" href="archive/"><img src="archive/assets/images/tsinghua.webp" alt=""><span>Tsinghua<br>B.A.</span></a>
+          <a class="badge" href="archive/"><img src="archive/assets/images/oxford.svg" alt=""><span>Oxford<br>exchange</span></a>
+          <a class="badge" href="archive/"><img src="archive/assets/images/pku.webp" alt=""><span>Peking<br>visiting</span></a>
+          <a class="badge" href="archive/"><img src="archive/assets/images/bremen.png" alt=""><span>Bremen<br>2025–26</span></a>
+          <a class="badge" href="archive/"><img src="archive/assets/images/deepsprings.jpeg" alt=""><span>Deep Springs<br>2024</span></a>
+          <a class="badge" href="archive/"><img src="archive/assets/images/outercoast.png" alt=""><span>Outer Coast<br>audited</span></a>
+        </div>
+      </div>
+      <div class="spine"></div>
+      <div class="page right">
+        <p class="kicker">Courses</p>
+        <div class="grid">
+          <a class="badge" href="archive/"><img src="archive/assets/images/bluedot.jpeg" alt=""><span>BlueDot<br>2026</span></a>
+          <a class="badge" href="archive/"><img src="archive/assets/images/lens.png" alt=""><span>Lens<br>2026</span></a>
+          <a class="badge" href="archive/"><b>Q</b><span>Quarr Abbey<br>2026</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="spread" hidden>
+      <div class="page left">
+        <p class="kicker">Languages</p>
+        <div class="grid">
+          <div class="badge"><b>文</b><span>Mandarin<br>native</span></div>
+          <div class="badge"><b>En</b><span>English<br>fluent</span></div>
+          <div class="badge"><b>De</b><span>German<br>C1</span></div>
+        </div>
+      </div>
+      <div class="spine"></div>
+      <div class="page right">
+        <p class="kicker">Skills</p>
+        <div class="grid">
+          <div class="badge"><b>φ</b><span>Philosophy</span></div>
+          <div class="badge"><b>AI</b><span>AI ethics</span></div>
+          <div class="badge"><b>Out</b><span>Outdoor education</span></div>
+        </div>
+      </div>
+    </div>
+    <button type="button" id="book-prev" aria-label="Previous page">‹</button>
+    <button type="button" id="book-next" aria-label="Next page">›</button>
+    <button type="button" id="book-x" aria-label="Close">×</button>
   </div>
 </div>
+<script>
+(function () {
+  const spreads = Array.from(document.querySelectorAll("#tome .spread"));
+  let page = 0;
+  function show(n) {
+    page = (n + spreads.length) % spreads.length;
+    spreads.forEach((s, i) => s.hidden = i !== page);
+  }
+  document.getElementById("book-prev").onclick = (e) => { e.stopPropagation(); show(page - 1); };
+  document.getElementById("book-next").onclick = (e) => { e.stopPropagation(); show(page + 1); };
+  document.getElementById("book-x").onclick = (e) => { e.stopPropagation(); if (typeof closeBook === "function") closeBook(); };
+})();
+</script>
 <script>
 const LINES = [
   "Way to stick a landing...",
