@@ -54,7 +54,7 @@
         "ba",
         "undergraduate"
       ],
-      "answer": "Philosophy graduate from Tsinghua, outstanding thesis award. The thesis is [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]], 2024. The argument is that the philosopher king is better understood as a constitutional architecture than as a human ruler. The writing page is [[here|https://daseinb612.github.io/archive/writing/]]."
+      "answer": "ASI as Philosopher Kings, Tsinghua, 2024, outstanding thesis award. The question is how the Good stays stable when neither a person nor an institution can hold it. Three parts: Theoria, the self cannot keep an ethical aim; Poiesis, the philosopher king reread as a function rather than a ruler; Praxis, a corrigible cyberocracy, ASI as moral infrastructure instead of a sovereign. The PDF is [[the thesis|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]."
     },
     {
       "tags": [
@@ -362,7 +362,7 @@
         "asi as",
         "outstanding"
       ],
-      "answer": "The thesis is [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]], 2024, written at Tsinghua. It won an outstanding thesis award. The claim is that the philosopher king is a constitutional architecture, not a human ruler."
+      "answer": "ASI as Philosopher Kings, Tsinghua, 2024, outstanding thesis award. The question is how the Good stays stable when neither a person nor an institution can hold it. Three parts: Theoria, the self cannot keep an ethical aim; Poiesis, the philosopher king reread as a function rather than a ruler; Praxis, a corrigible cyberocracy, ASI as moral infrastructure instead of a sovereign. The PDF is [[the thesis|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]."
     },
     {
       "tags": [
@@ -420,6 +420,51 @@
         "where"
       ],
       "answer": "The CV says London and Cambridge. Study has been China, the UK, and Germany. If you need a desk, [[write to him|mailto:t.walshdaniel@protonmail.com]]."
+    },
+    {
+      "tags": [
+        "theoria",
+        "self",
+        "ego",
+        "autonomy"
+      ],
+      "answer": "Theoria is the first part. The self is fragmented and recursively unstable, so it cannot keep pointing at an ethical end. That failure is why he will not leave the Good to a person's character."
+    },
+    {
+      "tags": [
+        "poiesis",
+        "philosopher king",
+        "plato",
+        "elite"
+      ],
+      "answer": "Poiesis rereads Plato. The philosopher king is not a wise person on a throne. Elite rule fails because it is embodied. The figure is kept as a function of structural wisdom, not as a human sovereign."
+    },
+    {
+      "tags": [
+        "praxis",
+        "cyberocracy",
+        "cyberocratic",
+        "scaffold",
+        "architecture"
+      ],
+      "answer": "Praxis is the design. Cyberocracy: a corrigible, recursive system that externalises the Good without closing into authority. ASI, constrained and updated, is an ambient moral infrastructure. Not an overlord. Dignity is supported when autonomy is scaffolded rather than assumed."
+    },
+    {
+      "tags": [
+        "the good",
+        "good life",
+        "riverbed",
+        "freedom"
+      ],
+      "answer": "The closing claim is that freedom was miscast as solitary sovereignty. The Good has to be built. His line for it is to design the riverbed rather than resist the current. Supervisor was Qu Xutong. Submitted 29 May 2024."
+    },
+    {
+      "tags": [
+        "supervisor",
+        "qu xutong",
+        "瞿"
+      ],
+      "answer": "The thesis supervisor was Qu Xutong, associate professor. Department of Philosophy, Tsinghua. Submitted 29 May 2024, under the name Zhao Dani."
     }
   ]
 }
