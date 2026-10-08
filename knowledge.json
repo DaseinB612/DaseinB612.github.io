@@ -54,7 +54,7 @@
         "ba",
         "undergraduate"
       ],
-      "answer": "He did a B.A. in Philosophy at Tsinghua, with an outstanding thesis award. The thesis is ASI as Philosopher Kings, 2024. The argument is that the philosopher king is better understood as a constitutional architecture than as a human ruler."
+      "answer": "Philosophy graduate from Tsinghua, outstanding thesis award. The thesis is [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]], 2024. The argument is that the philosopher king is better understood as a constitutional architecture than as a human ruler. The writing page is [[here|https://daseinb612.github.io/archive/writing/]]."
     },
     {
       "tags": [
@@ -81,7 +81,7 @@
         "applied philosophy",
         "urgency of defining"
       ],
-      "answer": "He started an M.A. in Applied Philosophy at Universität Bremen. The paper from that work, The Urgency of Defining AI, was graded 1,0. It uses Rahel Jaeggi's immanent critique and traces the term AI back to the 1955 Dartmouth proposal."
+      "answer": "He started an M.A. in Applied Philosophy at Universität Bremen. The paper from that work, [[The Urgency of Defining AI|https://daseinb612.github.io/archive/assets/urgency-of-defining-ai.docx]], was graded 1,0. It uses Rahel Jaeggi's immanent critique and traces the term AI back to the 1955 Dartmouth proposal."
     },
     {
       "tags": [
@@ -126,7 +126,7 @@
         "publications",
         "essays"
       ],
-      "answer": "The public writing is on the archive. The papers are ASI as Philosopher Kings (2024), AI's Trolley Problem Problem in Chinese (2024), The Urgency of Defining AI (2026), and Crustafarianism: A Practical Myth (2026). The Substack series are The Urgency Series, AI Safety Speedrun, and Artificial Moral Beings, which is still marked soon."
+      "answer": "The public writing is on the [[archive|https://daseinb612.github.io/archive/writing/]]. The papers are [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]] (2024), [[the trolley paper|https://daseinb612.github.io/archive/assets/trolley-problem-paper.pdf]] (2024, Chinese; [[viva|https://youtu.be/Zf5taAj39QI]]), [[The Urgency of Defining AI|https://daseinb612.github.io/archive/assets/urgency-of-defining-ai.docx]] (2026), and [[Crustafarianism|https://daseinb612.github.io/archive/assets/crustafarianism.docx]] (2026). The Substack is [[postalignment|https://postalignment.substack.com]]."
     },
     {
       "tags": [
@@ -134,7 +134,7 @@
         "trolley problem",
         "chinese paper"
       ],
-      "answer": "AI's Trolley Problem Problem is a 2024 paper in Chinese. It asks whether AI has a meta-ethical capacity, and argues that systems as of 2024 can simulate ethical reasoning without yet doing meta-ethical reflection. There is a viva voce clip on the writing page."
+      "answer": "[[AI's Trolley Problem Problem|https://daseinb612.github.io/archive/assets/trolley-problem-paper.pdf]] is a 2024 paper in Chinese. It asks whether AI has a meta-ethical capacity. There is a [[viva voce clip|https://youtu.be/Zf5taAj39QI]]."
     },
     {
       "tags": [
@@ -142,7 +142,7 @@
         "myth",
         "fangtang"
       ],
-      "answer": "Crustafarianism: A Practical Myth is a 2026 essay, co-written with an AI partner and submitted to the Fangtang AI for Humanities competition. It treats a multi-agent AI religion as a case study in human-AI meaning-making."
+      "answer": "[[Crustafarianism: A Practical Myth|https://daseinb612.github.io/archive/assets/crustafarianism.docx]] is a 2026 essay, co-written with an AI partner and submitted to the Fangtang AI for Humanities competition."
     },
     {
       "tags": [
@@ -150,7 +150,7 @@
         "urgency series",
         "speedrun"
       ],
-      "answer": "The Substack is postalignment.substack.com. The Urgency Series argues that some current alignment approaches make the problem worse. AI Safety Speedrun is a 90-day public log of him trying to break into the field. Artificial Moral Beings is listed as coming."
+      "answer": "The Substack is [[postalignment.substack.com|https://postalignment.substack.com]]. The Urgency Series, AI Safety Speedrun, and the coming Artificial Moral Beings series live there."
     },
     {
       "tags": [
@@ -158,7 +158,7 @@
         "project",
         "built"
       ],
-      "answer": "Four public projects: Value Atlas, TrolleyBench, the Meta-Ethical Round Table, and Safety Gandalf. The first three have live demos. All of them are on the archive projects page."
+      "answer": "Four public projects, all on the [[projects page|https://daseinb612.github.io/archive/projects/]]: [[Value Atlas|https://value-atlas.base44.app/]], [[TrolleyBench|https://moral-metric-lab.base44.app]], the [[Meta-Ethical Round Table|https://ethos-round-table.base44.app]], and [[Safety Gandalf|https://github.com/DaseinB612/safety-gandalf]]."
     },
     {
       "tags": [
@@ -166,14 +166,14 @@
         "atlas",
         "globe"
       ],
-      "answer": "Value Atlas is an interactive globe of whose values get embedded into frontier systems, and by what authority. Four lenses: who authors, how values get in, who watches, and what is missing."
+      "answer": "[[Value Atlas|https://value-atlas.base44.app/]] is an interactive globe of whose values get embedded into frontier systems, and by what authority. The repo is [[on GitHub|https://github.com/DaseinB612/value-atlas]]."
     },
     {
       "tags": [
         "trolleybench",
         "benchmark"
       ],
-      "answer": "TrolleyBench is an ethics-first alignment benchmark. It stress-tests proposals against a long run of moral philosophy and flags where they agree, contradict, or fall into known traps."
+      "answer": "[[TrolleyBench|https://moral-metric-lab.base44.app]] stress-tests alignment proposals against a long run of moral philosophy. The repo is [[on GitHub|https://github.com/DaseinB612/trolleybench]]."
     },
     {
       "tags": [
@@ -181,7 +181,7 @@
         "meta-ethical",
         "veil"
       ],
-      "answer": "The Meta-Ethical Round Table is a multi-model deliberation. Systems reason under a veil of ignorance, stripped of identity and role, so the judgement is harder to pin on a persona."
+      "answer": "The [[Meta-Ethical Round Table|https://ethos-round-table.base44.app]] is a multi-model deliberation under a veil of ignorance. The repo is [[on GitHub|https://github.com/DaseinB612/meta-ethical-round-table]]."
     },
     {
       "tags": [
@@ -189,7 +189,7 @@
         "safety gandalf",
         "navigator"
       ],
-      "answer": "Safety Gandalf is an AI safety research navigator. It points to the exact argument, in the exact paper, rather than a summary. Built for researchers and newcomers."
+      "answer": "[[Safety Gandalf|https://github.com/DaseinB612/safety-gandalf]] points to the exact argument, in the exact paper, rather than a summary."
     },
     {
       "tags": [
@@ -199,7 +199,7 @@
         "hire",
         "talk"
       ],
-      "answer": "Email is t.walshdaniel@protonmail.com. LinkedIn is b612-dasein. Substack is postalignment.substack.com. GitHub is DaseinB612. Reddit is u/dracollavenore. The book in my hands has the same doors."
+      "answer": "Email is [[t.walshdaniel@protonmail.com|mailto:t.walshdaniel@protonmail.com]]. LinkedIn is [[b612-dasein|https://www.linkedin.com/in/b612-dasein/]]. Substack is [[postalignment|https://postalignment.substack.com]]. GitHub is [[DaseinB612|https://github.com/DaseinB612]]. Reddit is [[u/dracollavenore|https://reddit.com/u/dracollavenore]]."
     },
     {
       "tags": [
@@ -207,7 +207,7 @@
         "resume",
         "curriculum"
       ],
-      "answer": "The CV is a PDF on the archive: archive/assets/Daniel_Walsh_CV_2026.pdf. The book has a badge for it too."
+      "answer": "The CV is [[this PDF|https://daseinb612.github.io/archive/assets/Daniel_Walsh_CV_2026.pdf]]. The book has a badge for it too."
     },
     {
       "tags": [
@@ -356,6 +356,15 @@
         "plans"
       ],
       "answer": "The next step he has named is a BlueDot Career Transition Grant, so he can work on AI safety full time. He has said he might go quiet while that is in. He has also said that the last time he said that, three posts followed."
+    },
+    {
+      "tags": [
+        "thesis",
+        "philosopher kings",
+        "asi as",
+        "outstanding"
+      ],
+      "answer": "The thesis is [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]], 2024, written at Tsinghua. It won an outstanding thesis award. The claim is that the philosopher king is a constitutional architecture, not a human ruler."
     }
   ]
 }

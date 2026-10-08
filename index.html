@@ -588,6 +588,21 @@ function startTalk() {
 function paintLine() {
   lineEl.textContent = "";
   const text = fullText.slice(0, shown);
+  const re = /\[\[([^\]|]+)\|([^\]]+)\]\]/g;
+  let last = 0, m;
+  while ((m = re.exec(text))) {
+    lineEl.appendChild(document.createTextNode(text.slice(last, m.index)));
+    const a = document.createElement("a");
+    a.href = m[2]; a.className = "mail"; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = m[1];
+    a.addEventListener("click", ev => ev.stopPropagation());
+    lineEl.appendChild(a);
+    last = m.index + m[0].length;
+  }
+  lineEl.appendChild(document.createTextNode(text.slice(last).replace(/\[\[[^\]]*$/, "")));
+  const c = document.createElement("i"); c.id = "cursor"; lineEl.appendChild(c);
+  return;
+  const unused = fullText.slice(0, shown);
   const word = "contact";
   const at = fullText.indexOf(word);
   if (at >= 0 && shown >= at + word.length) {
