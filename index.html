@@ -194,8 +194,19 @@
   #book-x { left:50%; bottom:-58px; transform:translateX(-50%); }
 
   #tome .grid.schools { grid-template-columns:repeat(5, 1fr); }
+
+  #tome.badges { border-radius:18px; box-shadow: 0 0 0 10px #e6c56a, 0 0 0 16px #6a4420, 0 0 0 20px #e6c56a, 0 24px 50px rgba(0,0,0,.5); }
+  #tome .dfable { position:absolute; top:-46px; left:50%; transform:translateX(-50%); z-index:4; font-family:"Cinzel Decorative", Georgia, serif; font-size:28px; color:#f0d48a; letter-spacing:.04em; text-shadow:0 2px 0 #6a4420, 0 0 12px rgba(0,0,0,.6); }
+  #tome .quill { position:absolute; width:130px; right:-24px; bottom:-36px; z-index:4; transform:rotate(18deg); filter:drop-shadow(0 6px 4px rgba(0,0,0,.35)); pointer-events:none; }
+  #tome .kicker { font-family:"IM Fell English", Georgia, serif; letter-spacing:.18em; }
+  #tome h2 { font-family:"IM Fell English", Georgia, serif; font-style:italic; font-size:68px; color:#5c4324; }
+  #chapters a.navy { background:#2f8a45; }
+  #chapters a.gold { background:#9a3030; color:#fff; }
+  #chapters a.dusk { background:#3d6ea8; }
+  #chapters a.ink { background:#24324a; }
+
 </style>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet"></head>
 <body>
 <div id="sky"></div>
 <div id="stars"></div>
@@ -215,9 +226,11 @@
 </div>
 <div id="journal">
   <div id="tome" class="badges">
+    <div class="dfable">DanielFable</div>
+    <svg class="quill" viewBox="0 0 120 160" aria-hidden="true"><path d="M96 8c-8 28-30 48-52 62 8 6 14 16 16 28-22-6-40-2-54 14 18 2 32 10 40 24-16 6-28 20-32 38 22-8 40-8 54 2-2-20 6-36 22-48 10 6 16 16 18 28 2-22-2-40-14-56 16-18 26-40 22-68z" fill="#4d5560"/><path d="M40 96c8 10 14 22 16 36" stroke="#c7b48a" stroke-width="3" fill="none"/></svg>
     <div class="spread">
       <div class="page left">
-        <p class="kicker">The log so far</p>
+        <p class="kicker">The fable so far</p>
         <div id="chapters">
           <a class="ribbon navy" href="#story">Story <i>I</i></a>
           <a class="ribbon gold" href="#writings">Writings <i>II</i></a>
@@ -227,8 +240,8 @@
       </div>
       <div class="spine"></div>
       <div class="page right">
-        <p class="kicker">Open the page</p>
-        <h2>Dasein's<br>Book<br>of Logs</h2>
+        <p class="kicker">Happening now</p>
+        <h2>Daniel's<br>Book<br>of Logs</h2>
       </div>
     </div>
     <div class="spread" hidden>
