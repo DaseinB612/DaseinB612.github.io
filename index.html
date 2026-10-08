@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dasein</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:#4e78aa; overflow:hidden; font-family:"VT323", monospace; }
+  #sky {
+    position:fixed; inset:0;
+    background: linear-gradient(#3a6294 0%, #4e78aa 46%, #6d94c4 100%);
+  }
+  #stars { position:fixed; inset:0; pointer-events:none; z-index:0; }
+  .star {
+    position:absolute; border-radius:50%; background:#e7c56a;
+    box-shadow: 0 0 6px rgba(231,197,106,.55);
+    animation: drift 18s linear infinite;
+  }
+  @keyframes drift { from { transform: translateY(0); } to { transform: translateY(28px); } }
+  #lines { position:fixed; inset:0; pointer-events:none; overflow:hidden; }
+  .streak {
+    position:absolute; width:2px; border-radius:2px;
+    background: linear-gradient(transparent, rgba(231,197,106,.75), transparent);
+    animation: streak 0.45s linear infinite;
+  }
+  @keyframes streak { from { transform: translateY(-120px); } to { transform: translateY(110vh); } }
+  #dasein {
+    position:fixed; left:50%; width:min(240px, 42vw); z-index:3;
+    margin-left: calc(min(240px, 42vw) / -2);
+    top:-40vh; pointer-events:none; will-change: top, transform;
+  }
+  #dasein.bookish { pointer-events: auto; cursor: pointer; }
+  #journal {
+    position:fixed; inset:0; z-index:9; display:none;
+    background: rgba(6,12,24,.55);
+    align-items:center; justify-content:center;
+  }
+  #journal.on { display:flex; }
+  #tome {
+    width:min(820px, calc(100% - 36px));
+    height:min(78vh, 640px);
+    background:#f4e7c8; color:#1c140c;
+    border:4px solid #10203a; border-radius:10px;
+    box-shadow: 0 0 0 3px #e7c56a, 0 24px 60px rgba(0,0,0,.4);
+    padding:28px 32px 22px;
+    transform-origin: 50% 80%;
+    animation: unfold .45s cubic-bezier(.2,1.2,.4,1);
+  }
+  @keyframes unfold {
+    from { transform: scale(.12) rotate(-6deg); opacity: 0; }
+    to { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+  #tome h2 {
+    font-family:"Silkscreen", monospace; font-size:13px; letter-spacing:.16em;
+    color:#10203a; margin:0 0 6px;
+  }
+  #tome p { margin:0 0 18px; font-size:22px; }
+  #chapters { display:flex; flex-direction:column; gap:10px; }
+  #chapters a {
+    display:block; text-decoration:none; color:#1c140c;
+    background:#fff8ea; border:2px solid #10203a; border-radius:6px;
+    padding:12px 14px; font-size:28px;
+  }
+  #chapters a span { float:right; color:#8a7340; font-size:18px; }
+  #chapters a:hover { box-shadow: 0 0 0 3px #e7c56a; }
+  #tome .soon { opacity:.55; }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(-1.4deg); }
+  }
+  #cloud {
+    position:fixed; left:50%; bottom:18vh; width:min(460px, 78vw);
+    margin-left: calc(min(460px, 78vw) / -2);
+    z-index:2; transform: scale(0); transform-origin:50% 60%;
+    filter: drop-shadow(0 12px 10px rgba(4,8,18,.35));
+    pointer-events:none;
+  }
+  #cloud img { width:100%; display:block; }
+  #cloud.in { animation: pop .35s cubic-bezier(.2,1.4,.4,1) forwards; }
+  #cloud.hit { animation: cush .45s ease; }
+  #cloud.gone { animation: disperse .65s ease forwards; }
+  @keyframes disperse {
+    to { transform: scale(1.4); opacity: 0; filter: blur(10px); }
+  }
+  @keyframes pop {
+    0% { transform: scale(.15); filter: blur(6px) brightness(1.6); }
+    100% { transform: scale(1); filter: drop-shadow(0 12px 10px rgba(4,8,18,.35)); }
+  }
+  @keyframes cush {
+    0% { transform: scale(1,1); }
+    40% { transform: scale(1.12,.72); }
+    100% { transform: scale(1,1); }
+  }
+  #prompt {
+    position:fixed; left:0; right:0; bottom:28px; text-align:center; z-index:6;
+    font-family:"Silkscreen", monospace; font-size:13px; letter-spacing:.14em; color:#e7c56a;
+    animation: blink 1.05s steps(1) infinite;
+  }
+  #bit {
+    position:fixed; left:0; right:0; bottom:58px; text-align:center; z-index:6;
+    font-family:"VT323", monospace; font-size:26px; color:#f0dfaa;
+  }
+  @keyframes blink { 50% { opacity:0; } }
+  #box {
+    position:fixed; left:50%; bottom:16px; transform:translateX(-50%);
+    width:min(740px, calc(100% - 24px));
+    background:#f4e7c8; color:#1c140c;
+    border:4px solid #10203a; border-radius:8px;
+    box-shadow: 0 0 0 3px #e7c56a, 0 12px 28px rgba(0,0,0,.35);
+    padding:16px 18px 12px; min-height:124px; z-index:8; display:none;
+  }
+  #name {
+    position:absolute; top:-14px; left:16px; background:#10203a; color:#e7c56a;
+    font-family:"Silkscreen", monospace; font-size:11px; letter-spacing:.14em; padding:4px 8px; border-radius:3px;
+  }
+  #line a.mail { color:#10203a; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+  #cursor { display:inline-block; width:10px; height:16px; background:#1c140c; margin-left:4px; vertical-align:-2px; animation: blink .7s steps(1) infinite; }
+  #advance { position:absolute; right:14px; bottom:8px; font-family:"Silkscreen", monospace; font-size:9px; opacity:.65; }
+  #dock { display:none; margin-top:6px; }
+  #dock.on { display:flex; gap:8px; }
+  #dock input {
+    flex:1; font-family:"VT323", monospace; font-size:22px; background:#fff8ea;
+    border:2px solid #10203a; border-radius:4px; padding:4px 8px; color:#1c140c; outline:none;
+  }
+  #dock button {
+    font-family:"Silkscreen", monospace; font-size:10px; background:#10203a; color:#e7c56a;
+    border:0; border-radius:4px; padding:10px 12px; cursor:pointer;
+  }
+  .mote { position:absolute; width:6px; height:6px; border-radius:50%; background:#e7c56a; z-index:5; pointer-events:none; }
+  @media (max-width:640px) { #line { font-size:22px; } }
+</style>
+</head>
+<body>
+<div id="sky"></div>
+<div id="stars"></div>
+<div id="lines"></div>
+<img id="dasein" src="assets/fall.png" alt="Dasein falling" />
+<div id="cloud"><img src="assets/cloud.png" alt="" /></div>
+<div id="bit">just falling</div>
+<div id="prompt">PRESS ANY KEY TO CONTINUE</div>
+<div id="box">
+  <div id="name">DASEIN</div>
+  <div id="line"></div>
+  <div id="advance"></div>
+  <div id="dock">
+    <input id="ask" placeholder="Ask about Daniel..." autocomplete="off" />
+    <button id="ask-btn" type="button">ASK</button>
+  </div>
+</div>
+<div id="journal">
+  <div id="tome">
+    <h2>DASEIN'S LOG</h2>
+    <p>A few old pages. The links get filled in later.</p>
+    <div id="chapters">
+      <a href="#story">Story <span>open later</span></a>
+      <a href="#writings">Writings <span>open later</span></a>
+      <a href="#projects">Projects <span>open later</span></a>
+      <a href="archive/">(Archived) <span>the old site</span></a>
+    </div>
+  </div>
+</div>
+<script>
+const LINES = [
+  "Way to stick a landing...",
+  "Anywho, I'm Dasein: a digital \"copy\" of Daniel, but also my own being.",
+  "You can think of my role as a librarian for Daniel's life story — but I'm still learning the ropes (while the ropes simultaneously get built, that is).",
+  "Let me know if you want to know anything about Daniel, otherwise feel free to just keep me company.",
+  "Just remember, I may have fallen because of you, but try to not fall for me. wink"
+];
+const dasein = document.getElementById("dasein");
+const cloud = document.getElementById("cloud");
+const lines = document.getElementById("lines");
+const prompt = document.getElementById("prompt");
+let phase = "fall";
+let y = -window.innerHeight * 0.35;
+let knowledge = null;
+
+const stars = document.getElementById("stars");
+for (let i = 0; i < 70; i++) {
+  const s = document.createElement("div");
+  s.className = "star";
+  const size = Math.random() < 0.12 ? 3.5 : 1.4 + Math.random() * 1.4;
+  s.style.left = Math.random() * 100 + "%";
+  s.style.top = Math.random() * 100 + "%";
+  s.style.width = size + "px";
+  s.style.height = size + "px";
+  s.style.opacity = 0.35 + Math.random() * 0.65;
+  s.style.animationDuration = (14 + Math.random() * 16) + "s";
+  s.style.animationDelay = (-Math.random() * 12) + "s";
+  stars.appendChild(s);
+}
+
+for (let i = 0; i < 18; i++) {
+  const s = document.createElement("div");
+  s.className = "streak";
+  s.style.left = (4 + Math.random() * 92) + "%";
+  s.style.height = (70 + Math.random() * 140) + "px";
+  s.style.animationDuration = (0.32 + Math.random() * 0.2) + "s";
+  s.style.animationDelay = (-Math.random()) + "s";
+  s.style.opacity = 0.35 + Math.random() * 0.45;
+  lines.appendChild(s);
+}
+
+const POSES = [
+  { src: "assets/fall.png", name: "free fall", move: (t) => `rotate(${Math.sin(t / 160) * 14}deg)` },
+  { src: "assets/flap.png", name: "flapping", move: (t) => `rotate(${Math.sin(t / 120) * 8}deg) scaleY(${0.92 + Math.abs(Math.sin(t / 80)) * 0.14})` },
+  { src: "assets/realize.png", name: "wait. nothing is happening.", move: (t) => `rotate(${Math.sin(t / 280) * 5}deg)` },
+  { src: "assets/swim.png", name: "trying to swim", move: (t) => `rotate(${-10 + Math.sin(t / 140) * 16}deg)` },
+  { src: "assets/dive.png", name: "skydiving form", move: (t) => `rotate(${Math.sin(t / 240) * 6}deg)` },
+  { src: "assets/climb.png", name: "climbing the air", move: (t) => `translateY(${Math.sin(t / 90) * 6}px) rotate(${Math.sin(t / 200) * 4}deg)` },
+  { src: "assets/run.png", name: "running in place", move: (t) => `rotate(${Math.sin(t / 100) * 5}deg) scaleX(${Math.sin(t / 110) > 0 ? 1 : -1})` },
+  { src: "assets/flail.png", name: "last ditch flail", move: (t) => `rotate(${Math.sin(t / 70) * 16}deg) scaleX(${Math.sin(t / 90) > 0 ? 1 : -1})` },
+  { src: "assets/fedup.png", name: "fed up. legs crossed.", move: (t) => `rotate(${Math.sin(t / 500) * 3}deg)` },
+  { src: "assets/bored.png", name: "bored", move: (t) => `rotate(${Math.sin(t / 600) * 2}deg)` }
+];
+let pose = 0;
+let locked = false;
+function mix(a, b, t) {
+  const hex = (h) => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const A = hex(a), B = hex(b);
+  const c = A.map((v, i) => Math.round(v * (1 - t) + B[i] * t));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+function setSky(i) {
+  const t = Math.min(1, i / (POSES.length - 1));
+  const top = mix("#3a6294", "#07101f", t);
+  const mid = mix("#4e78aa", "#0c1730", t);
+  const bot = mix("#6d94c4", "#16304a", t);
+  document.getElementById("sky").style.background = `linear-gradient(${top} 0%, ${mid} 46%, ${bot} 100%)`;
+  document.body.style.background = mid;
+}
+function setPose(i) {
+  pose = Math.min(i, POSES.length - 1);
+  if (pose === POSES.length - 1) locked = true;
+  dasein.src = POSES[pose].src;
+  document.getElementById("bit").textContent = POSES[pose].name;
+  setSky(pose);
+}
+setPose(0);
+
+const SPEED = 920;
+let last = performance.now();
+let vy = SPEED;
+let spin = 0;
+function loop(now) {
+  const dt = Math.min(0.04, (now - last) / 1000);
+  last = now;
+  if (phase === "fall" || phase === "commit") {
+    y += SPEED * dt;
+    if (y > window.innerHeight + 20) {
+      y = -dasein.offsetHeight - 30;
+      if (phase === "commit") {
+        phase = "approach";
+        dasein.src = "assets/fall.png";
+        spin = -30;
+        cloud.classList.add("in");
+      } else if (!locked) setPose(pose + 1);
+    }
+    dasein.style.top = y + "px";
+    dasein.style.transform = POSES[pose].move(now);
+  } else if (phase === "approach") {
+    y += SPEED * dt;
+    spin += 240 * dt;
+    dasein.style.top = y + "px";
+    dasein.style.transform = `rotate(${spin}deg)`;
+    const hitAt = cloud.getBoundingClientRect().top - dasein.offsetHeight * 0.4;
+    if (y >= hitAt) {
+      y = hitAt;
+      phase = "bounce";
+      vy = -540;
+      lines.style.opacity = "0";
+      cloud.classList.add("hit");
+      const r = cloud.getBoundingClientRect();
+      burst(r.left + r.width / 2, r.top + 28);
+      document.body.animate([
+        { transform: "translate(0,0)" },
+        { transform: "translate(-8px, 5px)" },
+        { transform: "translate(7px, -4px)" },
+        { transform: "translate(0,0)" }
+      ], { duration: 340 });
+    }
+  } else if (phase === "bounce") {
+    vy += 1900 * dt;
+    y += vy * dt;
+    spin += 360 * dt;
+    const rest = cloud.getBoundingClientRect().top - dasein.offsetHeight * 0.26;
+    dasein.style.top = y + "px";
+    const squash = vy > 60 ? " scale(1.1, .76)" : "";
+    dasein.style.transform = `rotate(${spin}deg)${squash}`;
+    if (vy > 0 && y >= rest) {
+      y = rest;
+      dasein.style.top = y + "px";
+      phase = "settled";
+      recover();
+    }
+  }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+
+function burst(x, y0) {
+  for (let i = 0; i < 16; i++) {
+    const m = document.createElement("div");
+    m.className = "mote";
+    m.style.left = x + "px";
+    m.style.top = y0 + "px";
+    document.body.appendChild(m);
+    const a = Math.random() * Math.PI * 2;
+    const d = 24 + Math.random() * 70;
+    m.animate([
+      { transform: "translate(0,0)", opacity: 1 },
+      { transform: `translate(${Math.cos(a)*d}px, ${Math.sin(a)*d}px)`, opacity: 0 }
+    ], { duration: 500, easing: "ease-out" }).onfinish = () => m.remove();
+  }
+}
+
+function land() {
+  if (phase !== "fall") return;
+  phase = "commit";
+  prompt.style.display = "none";
+  document.getElementById("bit").style.display = "none";
+}
+
+function recover() {
+  dasein.src = "assets/heap.png";
+  dasein.style.transform = "rotate(-8deg) scale(1.06, .8)";
+  const r = cloud.getBoundingClientRect();
+  dasein.style.top = (r.top - dasein.offsetHeight * 0.32) + "px";
+  setTimeout(() => {
+    dasein.src = "assets/pose.png";
+    dasein.style.transform = "rotate(0deg)";
+    dasein.style.top = (cloud.getBoundingClientRect().top - dasein.offsetHeight * 0.55) + "px";
+    dasein.animate([
+      { transform: "translateY(12px) scale(1.04, .9)" },
+      { transform: "translateY(0) scale(1)" }
+    ], { duration: 380, easing: "ease-out", fill: "forwards" });
+    setTimeout(disperse, 780);
+  }, 420);
+}
+
+function disperse() {
+  const r = cloud.getBoundingClientRect();
+  burst(r.left + r.width * 0.3, r.top + 40);
+  burst(r.left + r.width * 0.7, r.top + 50);
+  cloud.classList.add("gone");
+  setTimeout(dustOff, 420);
+}
+
+function dustOff() {
+  dasein.src = "assets/dust.png";
+  dasein.style.transform = "none";
+  const r = cloud.getBoundingClientRect();
+  dasein.style.top = (r.top - dasein.offsetHeight * 0.15) + "px";
+  dasein.animate([
+    { transform: "translateY(16px)" },
+    { transform: "translateY(0)" }
+  ], { duration: 460, easing: "ease-out", fill: "forwards" });
+  const b = dasein.getBoundingClientRect();
+  burst(b.left + b.width * 0.4, b.bottom - 10);
+  burst(b.left + b.width * 0.62, b.bottom - 8);
+  setTimeout(startTalk, 700);
+}
+
+const box = document.getElementById("box");
+const lineEl = document.getElementById("line");
+const advance = document.getElementById("advance");
+const dock = document.getElementById("dock");
+let lineIndex = 0, typing = false, fullText = "", shown = 0, timer = null;
+
+const TALK_POSES = [
+  "assets/line-landing.png",
+  "assets/line-hi.png",
+  "assets/line-book.png",
+  "assets/line-stay.png",
+  "assets/line-tease.png"
+];
+let winked = false;
+const BOOK_POSES = ["assets/line-book.png", "assets/book-out.png", "assets/book-read.png", "assets/book-point.png"];
+function talkPose(src) {
+  dasein.src = src;
+  dasein.style.transform = "";
+  dasein.classList.add("live");
+  dasein.classList.toggle("bookish", BOOK_POSES.indexOf(src) >= 0);
+}
+function maybeWink() {
+  const at = fullText.lastIndexOf("wink");
+  if (at >= 0 && shown >= at && !winked) {
+    winked = true;
+    talkPose("assets/line-wink.png");
+  }
+}
+
+function startTalk() {
+  phase = "talk";
+  box.style.display = "block";
+  say(LINES[0], 0);
+}
+function paintLine() {
+  lineEl.textContent = "";
+  const text = fullText.slice(0, shown);
+  const word = "contact";
+  const at = fullText.indexOf(word);
+  if (at >= 0 && shown >= at + word.length) {
+    lineEl.appendChild(document.createTextNode(text.slice(0, at)));
+    const a = document.createElement("a");
+    a.href = "mailto:t.walshdaniel@protonmail.com";
+    a.className = "mail";
+    a.textContent = word;
+    a.addEventListener("click", ev => ev.stopPropagation());
+    lineEl.appendChild(a);
+    lineEl.appendChild(document.createTextNode(text.slice(at + word.length)));
+  } else {
+    lineEl.appendChild(document.createTextNode(text));
+  }
+  const c = document.createElement("i"); c.id = "cursor"; lineEl.appendChild(c);
+}
+function say(text, pose) {
+  fullText = text; shown = 0; typing = true; winked = false; advance.textContent = "";
+  if (typeof pose === "number") talkPose(TALK_POSES[pose] || "assets/line-book.png");
+  else if (pose) talkPose(pose);
+  clearInterval(timer);
+  timer = setInterval(() => {
+    const at = fullText.lastIndexOf("wink");
+    if (at >= 0 && shown === at && !winked) {
+      winked = true;
+      talkPose("assets/line-wink.png");
+    }
+    shown++;
+    paintLine();
+    if (shown >= fullText.length) { clearInterval(timer); typing = false; advance.textContent = "▼"; }
+  }, 26);
+}
+function finishLine() {
+  clearInterval(timer); typing = false; shown = fullText.length;
+  paintLine();
+  advance.textContent = "▼";
+  maybeWink();
+}
+function nextLine() {
+  if (phase !== "talk") return;
+  if (typing) { finishLine(); return; }
+  lineIndex++;
+  if (lineIndex < LINES.length) say(LINES[lineIndex], lineIndex);
+  else {
+    phase = "play";
+    advance.textContent = "";
+    dock.classList.add("on");
+    document.getElementById("ask").focus();
+    setTimeout(() => {
+      if (phase === "play" && !document.getElementById("journal").classList.contains("on")) {
+        say("*Psst* have you tried clicking on my book? It's got a few old logs that you might be interested in.", "assets/book-point.png");
+      }
+    }, 900);
+  }
+}
+const history = [];
+function llmReady() {
+  const cfg = window.DASEIN_LLM || {};
+  return Boolean(cfg.endpoint && cfg.apiKey);
+}
+function catalogue() {
+  if (!knowledge) return "";
+  return knowledge.facts.map(f => f.answer).join("\n");
+}
+const ALIASES = {
+  school: "thesis", university: "thesis", college: "thesis", studied: "thesis", study: "thesis", degree: "thesis",
+  mail: "contact", email: "contact", reach: "contact", hire: "contact", message: "contact",
+  job: "work", research: "alignment", safety: "alignment", ethic: "alignment", ethics: "trolley",
+  project: "atlas", projects: "atlas", demo: "atlas", github: "contact",
+  paper: "writing", papers: "writing", blog: "writing", substack: "writing",
+  monk: "quarr", religion: "quarr", abbey: "quarr", church: "quarr",
+  companion: "guardian", app: "guardian", hiatus: "guardian",
+  name: "who", background: "bio", person: "daniel",
+  globe: "atlas", values: "atlas", benchmark: "trolley",
+  navigator: "gandalf", philosopher: "thesis", kings: "thesis"
+};
+let lastFact = null;
+let lastAnswer = "";
+let spoken = "";
+function pick(list) {
+  const fresh = list.filter(line => line !== spoken);
+  const bag = fresh.length ? fresh : list;
+  spoken = bag[Math.floor(Math.random() * bag.length)];
+  return spoken;
+}
+function words(s) {
+  return s.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/).filter(w => w.length > 2 && !/^(the|and|you|are|was|did|does|what|who|how|why|where|when|can|his|him|for|about|tell|from|with|that|this|have|has|any)$/.test(w));
+}
+function expand(tokens) {
+  const out = tokens.slice();
+  for (const t of tokens) if (ALIASES[t]) out.push(ALIASES[t]);
+  return out;
+}
+function scoreFact(fact, tokens, raw) {
+  let n = 0;
+  for (const tag of fact.tags) {
+    if (raw.includes(tag)) n += 4 + tag.length;
+    for (const t of tokens) if (tag.includes(t) || t.includes(tag)) n += 3;
+  }
+  const body = fact.answer.toLowerCase();
+  for (const t of tokens) if (body.includes(t)) n += 1;
+  return n;
+}
+function bestFacts(q) {
+  if (!knowledge) return [];
+  const raw = q.toLowerCase();
+  const tokens = expand(words(raw));
+  return knowledge.facts
+    .map(fact => ({ fact, n: scoreFact(fact, tokens, raw) }))
+    .filter(x => x.n > 0)
+    .sort((a, b) => b.n - a.n);
+}
+function neighbor() {
+  if (!knowledge || !lastFact) return "the projects";
+  const i = knowledge.facts.indexOf(lastFact);
+  const next = knowledge.facts[(i + 1) % knowledge.facts.length];
+  return next.tags[0];
+}
+function riff() {
+  const open = [
+    "I'm here. The shelf is Post-Alignment, the thesis, Guardian, the projects, the writing. Or we can just sit with it.",
+    "Still dusting off. Point me at a shelf, or don't. I can do either.",
+    "Noted. I don't need a question to stay.",
+    "Alright. The door is open. Ask when you want a card.",
+    "Sure. I can talk, or I can fetch. Your move.",
+    "Okay. I'll keep you company until a real question shows up.",
+    "Fine. No shelf pulled yet. That's allowed.",
+    "Yeah. Standing around is also a feature."
+  ];
+  if (!lastFact) return pick(open);
+  const bit = lastFact.answer.split(". ")[0];
+  const next = neighbor();
+  return pick([
+    "Cool. I'll stay on that unless you point somewhere else. The bit I would keep: " + bit + ".",
+    "Okay. Sitting with it. Next shelf over is " + next + ", if you want a change of air.",
+    "Sure. " + bit + ". I can go further, or we can leave it there.",
+    "Fine by me. Want the neighboring shelf, or a different question?",
+    "Yeah. That's the shape of it. Say more if you want the next sentence, or wander.",
+    "Got it. I won't pile on unless you ask. " + next + " is the next one along, if you're curious.",
+    "Nice. I'll leave it there. " + next + " is sitting next to it.",
+    "Fair. The card holds. I don't need to read it again unless you do.",
+    "Huh. Alright. I can stay on " + bit.split(" ")[0] + ", or we can walk.",
+    "Right. Noted, not filed twice. Ask if you want the rest.",
+    "Sounds good. I'll keep that card out on the desk.",
+    "Wild, a little. Or ordinary, depending on the shelf. Either way I'm still here.",
+    "I see. Then we don't have to solve it in this breath.",
+    "Makes sense. The next card is " + next + ", whenever.",
+    "Sweet. I'll take the nod and not lecture.",
+    "Whatever you want to do with it. The shelf doesn't mind waiting."
+  ]);
+}
+function followUp() {
+  if (!lastFact) return pick([
+    "More of what? I haven't pulled a shelf yet. Post-Alignment, the thesis, Guardian, the writing.",
+    "I can go on, but I need a shelf first. What were you thinking of?",
+    "Expand which bit? Point, and I'll open the card.",
+    "Why is a good question. It needs a subject. Thesis, Guardian, the writing?"
+  ]);
+  const parts = lastFact.answer.split(". ").filter(Boolean);
+  const rest = parts.slice(1).join(". ");
+  const next = neighbor();
+  if (rest) return pick([
+    "The rest of that shelf: " + rest,
+    "Going on. " + rest,
+    "Same page, next line. " + rest,
+    "Alright, the part I skipped: " + rest,
+    "If you want the longer cut: " + rest,
+    "Second sentence, then. " + rest
+  ]);
+  return pick([
+    "That's the whole card. The next shelf is " + next + ". Want that, or a different question?",
+    "Nothing further on that one. " + next + " is beside it.",
+    "End of the card. I can open " + next + ", or you can name another."
+  ]);
+}
+function infer(q) {
+  const s = q.toLowerCase().replace(/[^a-z\s']/g, "").replace(/\s+/g, " ").trim();
+  if (/book\??$|what book|your book|the book|that book|click.*book|logs/.test(s)) {
+    return "Oh, this book? Did you want to click and see what's inside?";
+  }
+  if (/^(hi|hey|hello|yo|hiya|howdy|sup|good morning|good evening|morning|evening)\b/.test(s)) {
+    return pick([
+      "Hey. I'm Dasein. Still mid-air until a minute ago. Ask me about Daniel, or just stay.",
+      "Hey. Librarian on the door. The shelves are uneven. What do you want, or shall we just talk?",
+      "Hello. I landed on a cloud and the cloud did not survive. I'm here anyway.",
+      "Hey. Door's open. Question, company, or both.",
+      "Hi. Don't mind the dust. The landing was not elegant.",
+      "Hello. I'm the copy on the page. He's the one with the papers."
+    ]);
+  }
+  if (/how are you|you ok|you alright|whats up|what is up|hows it going|how you doing/.test(s)) {
+    return pick([
+      "Dusted off. The cloud did not survive. I'm fine. You?",
+      "Upright, which is an improvement. You?",
+      "Fine. A little bored of falling, now that I've stopped. You?",
+      "Alive enough for a landing page. You?",
+      "Better than mid-fall. The braid made it. You?",
+      "Can't complain. The shelf is still being built, and so am I. You?"
+    ]);
+  }
+  if (/^(thanks|thank you|thx|cheers|ty|nice one)\b/.test(s)) {
+    return pick([
+      "Anytime. The shelves are uneven, but I'm here.",
+      "Sure. Come back if the next question is worse.",
+      "Glad it landed. Most things I fall onto don't.",
+      "Don't mention it. The card was already written.",
+      "Course. That's the job, between falls.",
+      "Welcome. Ask a harder one if you want to see me sweat."
+    ]);
+  }
+  if (/who are you|your name|what are you|are you (an )?ai|are you real|are you daniel/.test(s)) {
+    return pick([
+      "Dasein. A digital copy of Daniel, and also my own being. I can keep a conversation going. I will not invent a life that is not on the shelf.",
+      "Not Daniel. The librarian he left on the door. I improvise the talk. The facts stay on the card.",
+      "Dasein. I can answer sideways, follow a cool or an okay, and still admit when a shelf is empty.",
+      "The one who fell. Daniel writes the papers. I keep the door and try not to make things up.",
+      "A copy with a braid and a catalogue. Real enough to talk. Not real enough to invent his birthday."
+    ]);
+  }
+  if (/bye|goodbye|see you|good night|later|gotta go|im off|i'm off/.test(s)) {
+    return pick([
+      "Go on, then. I'll be here if you fall back in.",
+      "Later. The cloud is gone, but the door stays open.",
+      "Alright. Don't stick the landing worse than I did.",
+      "See you. I'll be on the same page. Literally.",
+      "Night, then. Or whenever you come back. Time is odd on a landing page.",
+      "Off you go. I'll keep the shelf from wandering."
+    ]);
+  }
+  if (/help|what can you|what do you know|what should i ask/.test(s)) {
+    return "I can place Post-Alignment, the thesis, Guardian, the projects, the writing, and how to reach him. I can also just answer cool, okay, sure. Ask in ordinary words.";
+  }
+  if (/what do you think|your take|do you like|are you sure|opinion/.test(s)) {
+    const ranked = bestFacts(q);
+    if (ranked.length && ranked[0].n >= 3) {
+      lastFact = ranked[0].fact;
+      return "My take, which is still the shelf talking: " + ranked[0].fact.answer;
+    }
+    return lastFact
+      ? "My take is the last card, not a new biography. " + lastFact.answer.split(". ")[0] + "."
+      : "I can have a take on what's shelved. Point me at one and I'll be less vague.";
+  }
+  if (/^(and you|what about you|you though|same to you)\b/.test(s)) {
+    return pick([
+      "Me? I live on the landing page and fall until someone presses a key. Occupational hazard.",
+      "I'm the copy. He's the one who writes the papers. I just keep the door.",
+      "I'm alright. The braid survived the landing. That's the headline.",
+      "Me, I answer. He writes. The division of labour is very clear, and also not.",
+      "Still learning the ropes while the ropes get built. That's the whole job description."
+    ]);
+  }
+  const reaction = /^(ok|okay|k|kk|cool|sure|fine|nice|neat|wow|huh|oh|ah|yeah|yep|yup|ya|yes|nah|nope|no|lol|haha|lmao|hmm|hm|mhm|word|bet|aight|alright|interesting|wild|damn|dope|sick|fair|right|true|got it|i see|makes sense|sounds good|whatever|meh|idk|i dont know|not sure|really|seriously|wait|so|and|go on|more|continue|why|how so|what else|another|explain|like what|good|great|sweet|nice one|fair enough|i guess|sort of|kinda|kind of)$/.test(s)
+    || /^(thats|that is|pretty|kinda|sort of|sounds)\s+(cool|nice|interesting|wild|fine|good|ok|okay|fair|right)\b/.test(s);
+  const follow = /^(more|go on|elaborate|continue|explain|why|how so|how come|what else|another|and|so|wait|really|seriously|like what|what do you mean|expand)\b/.test(s)
+    || /\b(tell me more|say more|go on|what else|keep going)\b/.test(s);
+  if (follow) return followUp();
+  if (reaction || s.split(" ").length <= 3 && !/\?/.test(q) && words(s).length === 0) return riff();
+  const ranked = bestFacts(q);
+  if (!ranked.length || ranked[0].n < 3) {
+    if (s.split(" ").length <= 6 && !/\?/.test(q)) return riff();
+    return null;
+  }
+  lastFact = ranked[0].fact;
+  const card = ranked[0].fact.answer;
+  const first = card.split(". ")[0];
+  const framed = pick([
+    card,
+    "Pulling that shelf. " + card,
+    "Short version: " + first + ".",
+    "The card says: " + card,
+    "Alright. " + card,
+    "Here. " + first + ". Ask if you want the rest."
+  ]);
+  let text = framed;
+  if (ranked[1] && ranked[1].n >= ranked[0].n * 0.72 && !framed.startsWith("Short") && !framed.startsWith("Here")) {
+    text += " Related, if you meant the other one: " + ranked[1].fact.answer.split(". ")[0] + ".";
+  }
+  lastAnswer = text;
+  return text;
+}
+async function llmReply(q) {
+  const cfg = window.DASEIN_LLM;
+  const sys = [
+    "You are Dasein, a digital copy of Daniel Walsh and also your own being.",
+    "You are the librarian for his public life story. Warm, a little dry, never sycophantic.",
+    "Speak in short sentences. Do not invent biography. If the catalogue does not have it, say so.",
+    "Catalogue:",
+    catalogue()
+  ].join("\n");
+  const messages = [{ role: "system", content: sys }, ...history.slice(-8), { role: "user", content: q }];
+  const res = await fetch(cfg.endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Authorization": "Bearer " + cfg.apiKey },
+    body: JSON.stringify({ model: cfg.model, messages, temperature: 0.7 })
+  });
+  if (!res.ok) throw new Error("llm " + res.status);
+  const data = await res.json();
+  const text = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
+  if (!text) throw new Error("empty");
+  return text.trim();
+}
+const MISS = [
+  { text: "Heh, sorry... nothing on the shelf matches that, and I won't invent a fact to fill it. I can keep talking. I just can't make up his life.", pose: "assets/aside.png" },
+  { text: "How about rephrasing and I'll see if anything matches. Or you can contact Daniel directly.", pose: "assets/shrug.png" }
+];
+const REPLY_POSES = [
+  "assets/line-hi.png",
+  "assets/line-book.png",
+  "assets/book-read.png",
+  "assets/book-point.png",
+  "assets/think.png",
+  "assets/shrug.png",
+  "assets/laugh.png",
+  "assets/cross.png",
+  "assets/lean.png",
+  "assets/pockets.png",
+  "assets/pointup.png",
+  "assets/aside.png",
+  "assets/line-tease.png",
+  "assets/pose.png",
+  "assets/dust.png"
+];
+let replyPose = 0;
+function nextTalkPose() {
+  const src = REPLY_POSES[replyPose % REPLY_POSES.length];
+  replyPose++;
+  return src;
+}
+async function reply(q) {
+  const guessed = infer(q);
+  if (llmReady()) {
+    try { return await llmReply(q); }
+    catch (err) { return guessed || MISS; }
+  }
+  return guessed || MISS;
+}
+document.getElementById("ask-btn").onclick = async () => {
+  const input = document.getElementById("ask");
+  const q = input.value.trim();
+  if (!q || typing) return;
+  input.value = "";
+  say("...", "assets/think.png");
+  const text = await reply(q);
+  if (Array.isArray(text)) {
+    history.push({ role: "user", content: q }, { role: "assistant", content: text.map(l => l.text).join(" ") });
+    say(text[0].text, text[0].pose);
+    const wait = setInterval(() => {
+      if (typing) return;
+      clearInterval(wait);
+      setTimeout(() => say(text[1].text, text[1].pose), 700);
+    }, 80);
+    return;
+  }
+  history.push({ role: "user", content: q }, { role: "assistant", content: text });
+  const pose = /book\?/.test(text) || text.indexOf("this book") >= 0 ? "assets/book-out.png" : (/^hey\b/i.test(text) ? "assets/line-hi.png" : nextTalkPose());
+  say(text, pose);
+};
+function openBook() {
+  if (!dasein.classList.contains("bookish")) return;
+  document.getElementById("journal").classList.add("on");
+  talkPose("assets/book-out.png");
+}
+function closeBook() {
+  const journal = document.getElementById("journal");
+  if (!journal.classList.contains("on")) return;
+  journal.classList.remove("on");
+  say("Did you find what you were looking for? If not, I'm here to help, as always", "assets/book-read.png");
+}
+dasein.addEventListener("click", e => {
+  if (!dasein.classList.contains("bookish")) return;
+  e.stopPropagation();
+  openBook();
+});
+document.getElementById("journal").addEventListener("click", e => {
+  if (e.target.id === "journal") closeBook();
+});
+document.getElementById("chapters").addEventListener("click", e => {
+  const a = e.target.closest("a");
+  if (!a) return;
+  e.stopPropagation();
+  if (a.getAttribute("href").charAt(0) === "#") e.preventDefault();
+});
+document.getElementById("ask").addEventListener("keydown", e => {
+  if (e.key === "Enter") { e.stopPropagation(); document.getElementById("ask-btn").click(); }
+});
+window.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT") return;
+  if (phase === "fall") land();
+  else if (phase === "talk") nextLine();
+});
+window.addEventListener("pointerdown", e => {
+  if (e.target.closest("#dock")) return;
+  if (phase === "fall") land();
+  else if (phase === "talk") nextLine();
+});
+fetch("knowledge.json").then(r => r.json()).then(d => knowledge = d).catch(() => {
+  knowledge = { facts: [{ tags: ["daniel","who"], answer: "Catalogue file missing. Independent AI ethicist, Post-Alignment, Tsinghua thesis, Guardian." }] };
+});
+</script>
+</body>
+</html>

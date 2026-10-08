@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS user_static_objects (user_uuid TEXT NOT NULL, object_uuid TEXT NOT NULL, object_version INT NOT NULL, object_type INT NOT NULL, removed INT NOT NULL, object_metadata BLOB NOT NULL, PRIMARY KEY (user_uuid, object_uuid));
+CREATE TABLE IF NOT EXISTS user_static_objects_data (user_uuid TEXT NOT NULL, object_uuid TEXT NOT NULL, object_data BLOB NOT NULL, PRIMARY KEY (user_uuid, object_uuid));

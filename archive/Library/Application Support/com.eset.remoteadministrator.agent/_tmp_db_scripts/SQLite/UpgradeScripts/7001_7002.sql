@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS authentication_device_users (device_user_uuid TEXT PRIMARY KEY, device_uuid TEXT NOT NULL, staff_user_uuid TEXT NOT NULL, user_sid TEXT NOT NULL, domain_sid TEXT, fingerprint BLOB NOT NULL);
+CREATE TABLE IF NOT EXISTS authentication_credentials (entity_uuid TEXT NOT NULL, entity_type INTEGER NOT NULL, authenticator_type INTEGER NOT NULL, authenticator_value TEXT NOT NULL, PRIMARY KEY(entity_uuid, entity_type, authenticator_type));
+CREATE TABLE IF NOT EXISTS authentication_session_tokens (entity_uuid TEXT NOT NULL, entity_type INTEGER NOT NULL, token_value BLOB NOT NULL, PRIMARY KEY(entity_uuid, entity_type));
+CREATE TABLE IF NOT EXISTS authentication_collision_token (collision_token TEXT NOT NULL, first_collision INT NOT NULL DEFAULT(0), last_collision INT NOT NULL DEFAULT(0));

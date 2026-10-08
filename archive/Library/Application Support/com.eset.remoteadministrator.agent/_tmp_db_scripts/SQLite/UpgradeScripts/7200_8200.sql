@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS authentication_fluctuating_hw_fingerprint(hash TEXT PRIMARY KEY, hwf_blob BLOB NOT NULL);

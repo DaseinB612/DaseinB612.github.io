@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS UESETSConnector_tasks (unique_id INTEGER PRIMARY KEY, task_id INTEGER NOT NULL, task_type INTEGER NOT NULL, task_state INTEGER NOT NULL, task_created INTEGER NOT NULL, task_data BLOB NOT NULL, mapper_id INTEGER NOT NULL, UNIQUE(task_id, task_type, mapper_id));
