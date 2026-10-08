@@ -9,21 +9,270 @@
         "daniel",
         "about",
         "bio",
-        "person",
-        "yourself"
+        "background"
       ],
-      "answer": "Daniel Walsh is an independent AI ethicist and philosopher. The public site puts him at the intersection of moral philosophy, AI safety, and governance. I am the copy who lives on the landing page. He is the one who writes the papers."
+      "answer": "Daniel Walsh, Chinese name Zhao Dani, 赵丹尼. Mother Chinese, father Irish. Born in Dubai on 12 November 2000, grew up around the world. Independent researcher on AI character, model ethics, and China-West safety fieldbuilding. The CV is [[here|Daniel-AI-Safety-CV.pdf]]."
     },
     {
       "tags": [
         "dasein",
         "you",
         "who are you",
-        "librarian",
-        "copy",
-        "avatar"
+        "copy"
       ],
-      "answer": "I'm Dasein. A digital copy of Daniel, and also my own being. My job is librarian for his public life story. The shelves are still being built, and so am I."
+      "answer": "I'm Dasein, the copy on the door. He is the one who writes the papers. I give the answer he left on the shelf. I do not invent the rest."
+    },
+    {
+      "tags": [
+        "age",
+        "old",
+        "birthday",
+        "born"
+      ],
+      "answer": "12 November 2000. Born in Dubai."
+    },
+    {
+      "tags": [
+        "food",
+        "spaghetti",
+        "bubble tea",
+        "favourite",
+        "favorite"
+      ],
+      "answer": "Spaghetti, particularly Del Monte Filipino-style sauce. And bubble tea."
+    },
+    {
+      "tags": [
+        "parents",
+        "mother",
+        "father",
+        "irish",
+        "chinese",
+        "family"
+      ],
+      "answer": "His mother is Chinese and his father is Irish. He grew up between those, and around the world. Born in Dubai."
+    },
+    {
+      "tags": [
+        "work",
+        "do",
+        "does",
+        "job",
+        "role"
+      ],
+      "answer": "Character evals and model ethics, China-West AI safety, fieldbuilding. The concrete eval is TrolleyBench. The CV is [[here|Daniel-AI-Safety-CV.pdf]]. Outdoor education is the job that currently pays the bills."
+    },
+    {
+      "tags": [
+        "want",
+        "ideal",
+        "village",
+        "robo",
+        "psychologist",
+        "roadmap"
+      ],
+      "answer": "The life he actually wants is a small village, up with the sun, asleep under the stars, helping with ordinary problems. He is trying to get into AI safety because he thinks it is an x-risk, and there is no village if that goes wrong. The role he wants does not exist yet: a robo-ethicist-psychologist, someone who talks to models every day, watches their moral progress, and reports to the technical team. The road there is fellowships."
+    },
+    {
+      "tags": [
+        "safety",
+        "why safety",
+        "x-risk",
+        "xrisk",
+        "started",
+        "2022",
+        "asimov"
+      ],
+      "answer": "He dates the public start to about 2022, because that is when he began writing and publishing. The private start is earlier. He grew up on science fiction, Asimov included. He treats the risk as serious enough that the ideal life is downstream of it."
+    },
+    {
+      "tags": [
+        "character",
+        "character evals",
+        "alignment",
+        "moral progress"
+      ],
+      "answer": "Character evals are an ongoing project. He cares how an AI character forms, and what that implies for alignment. TrolleyBench is the concrete example: not whether models can say something ethical, but how ethical they actually are."
+    },
+    {
+      "tags": [
+        "china",
+        "west",
+        "race",
+        "fieldbuilding",
+        "collaboration"
+      ],
+      "answer": "He thinks China-West safety fieldbuilding matters. Not because of a race. He calls the race mostly an American fiction: people in China do not experience it as one. The US and China lead the frontier, so the work should be a collaboration."
+    },
+    {
+      "tags": [
+        "thesis",
+        "philosopher kings",
+        "asi",
+        "argument"
+      ],
+      "answer": "ASI as Philosopher Kings, Tsinghua, 2024, outstanding thesis award. It started as a shower thought after a video on surveillance capitalism: if choices are already nudged, freedom is choosing your influencers, and a morally competent ASI would be the best one. Near the end it pivoted to value loading. Self-driving cars made the trolley problem real. Either the model judges, or humans inject brittle values that recursive self-improvement then compounds. He argued a model can only be trusted to judge if it has meta-ethical capacity, and made that case from Chalmers and experimental data. He did not have solid proof. The PDF is [[the thesis|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]."
+    },
+    {
+      "tags": [
+        "theoria",
+        "poiesis",
+        "praxis",
+        "cyberocracy"
+      ],
+      "answer": "The submitted shape is three parts. Theoria: the self cannot hold an ethical aim. Poiesis: the philosopher king reread as a function, not a ruler. Praxis: a corrigible cyberocracy, ASI as moral infrastructure rather than a sovereign. The shower thought and the value-loading pivot are the origin. The PDF is [[the thesis|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]."
+    },
+    {
+      "tags": [
+        "bremen",
+        "germany",
+        "masters",
+        "left",
+        "ma"
+      ],
+      "answer": "He went to Bremen for the philosophy, the praktikum, and the free tuition. At the time it was the programme where he could research AI meta-ethical capacity. It was not what had been advertised, so he left. The paper he did finish there is The Urgency of Defining AI, graded 1,0."
+    },
+    {
+      "tags": [
+        "guardian",
+        "kickstarter",
+        "funding",
+        "companion"
+      ],
+      "answer": "Guardian was his own attempt at meta-ethical AI, September 2022 to February 2026. The scope outgrew him and he could not fund it, even with data he found promising. He allows that the data may only have been promising to him. The useful part survived: the Meta-Ethical Round Table was Guardian's core engine."
+    },
+    {
+      "tags": [
+        "trolleybench",
+        "trolley",
+        "chat",
+        "api",
+        "claude",
+        "coherence"
+      ],
+      "answer": "TrolleyBench started as a curiosity: models can do philosophy and ethics now, but how well? Not well enough. One finding is chat versus API. Claude in chat stays deontological. Claude over the API stays consequentialist. Consistent inside a frame is not coherent. He thinks coherence is the moral point, not never changing your mind, but being able to take responsibility. Demo: [[TrolleyBench|https://moral-metric-lab.base44.app]]."
+    },
+    {
+      "tags": [
+        "round table",
+        "meta-ethical",
+        "veil"
+      ],
+      "answer": "The Meta-Ethical Round Table was the core engine of Guardian, and survived it. Models deliberate under a veil of ignorance. Demo: [[the round table|https://ethos-round-table.base44.app]]."
+    },
+    {
+      "tags": [
+        "value atlas",
+        "atlas"
+      ],
+      "answer": "Value Atlas is a globe of whose values get into frontier systems, and by what authority. Demo: [[Value Atlas|https://value-atlas.base44.app/]]."
+    },
+    {
+      "tags": [
+        "gandalf",
+        "navigator"
+      ],
+      "answer": "Safety Gandalf points at the argument in the paper, not a summary. Repo: [[Safety Gandalf|https://github.com/DaseinB612/safety-gandalf]]."
+    },
+    {
+      "tags": [
+        "monk",
+        "quarr",
+        "abbey",
+        "shaolin",
+        "religion"
+      ],
+      "answer": "Monks had always appealed. Shaolin, and the religious counterparts: God, the universe, death, on the view that death is longer than life. Quarr Abbey, February to April 2026, was the internship. The essay on AI and lived religion went to Fangtang at Tsinghua."
+    },
+    {
+      "tags": [
+        "bluedot",
+        "blue dot",
+        "door",
+        "qualification"
+      ],
+      "answer": "BlueDot was the foot in the door. He describes the field as high trust, and still wanting a qualification. He did the Future of AI, AGI Strategy, and Frontier AI Governance courses."
+    },
+    {
+      "tags": [
+        "gen stream",
+        "lisa",
+        "glassdoor",
+        "london",
+        "accelerator"
+      ],
+      "answer": "Gen Stream was the accelerator. It got him to London and LISA, and the opportunities since have come off that. About a 2.4 percent acceptance. Glassdoor for AI Safety was the five-day project there."
+    },
+    {
+      "tags": [
+        "better futures",
+        "fellowship",
+        "what then"
+      ],
+      "answer": "Better Futures is the fellowship he is in now, August to November 2026, with AI Safety Collab and a Forethought curriculum. His reason: a lot of people work on surviving, and then what."
+    },
+    {
+      "tags": [
+        "spar",
+        "research taste"
+      ],
+      "answer": "SPAR is where he is practising research taste."
+    },
+    {
+      "tags": [
+        "mats",
+        "final",
+        "long term"
+      ],
+      "answer": "MATS is meant to be the long version of Gen Stream. A final accelerator. He is in the second round."
+    },
+    {
+      "tags": [
+        "outdoor",
+        "ymce",
+        "bills",
+        "pays",
+        "contract"
+      ],
+      "answer": "Outdoor education is on the CV because it pays the bills. It is the professional job, Director of Special Events at YMCE Camps, on contract until November. He also calls himself a deep-context generalist: Rawls' veil of ignorance is how he handles conflict between kids, and the same move is his Socratic approach to human-in-the-loop oversight."
+    },
+    {
+      "tags": [
+        "languages",
+        "mandarin",
+        "english",
+        "german",
+        "chinese"
+      ],
+      "answer": "Fluent in English and Mandarin. Professional working proficiency in German. He got to C1 in under a year to study in Germany."
+    },
+    {
+      "tags": [
+        "available",
+        "start",
+        "visa",
+        "citizen",
+        "hire",
+        "when"
+      ],
+      "answer": "On contract for outdoor education until November. Available for AI safety work otherwise, as soon as the fit is real. He does not want a leap at whatever is open. British citizen, right to live and work in the UK. He does not expect a US visa to be a serious obstacle."
+    },
+    {
+      "tags": [
+        "contact",
+        "email",
+        "reach",
+        "linkedin"
+      ],
+      "answer": "Email is [[t.walshdaniel@protonmail.com|mailto:t.walshdaniel@protonmail.com]]. LinkedIn is [[b612-dasein|https://www.linkedin.com/in/b612-dasein/]]. The CV is [[here|Daniel-AI-Safety-CV.pdf]]."
+    },
+    {
+      "tags": [
+        "cv",
+        "resume",
+        "curriculum"
+      ],
+      "answer": "[[Daniel Walsh, AI Safety CV|Daniel-AI-Safety-CV.pdf]]. London and Cambridge. Character evals, China-West safety, fieldbuilding."
     },
     {
       "tags": [
@@ -36,25 +285,6 @@
         "research"
       ],
       "answer": "Post-Alignment is his current focus. The claim is that AI systems should co-author their own ethical specifications through Socratic dialogue, aimed at objective moral truth rather than a freeze-frame of human preferences. He treats it as a complement to existing alignment work, not a replacement."
-    },
-    {
-      "tags": [
-        "guardian",
-        "companion",
-        "app"
-      ],
-      "answer": "Guardian is a philosophical AI companion he founded. The site describes it as something that nudges people toward ethical goal alignment and eudaimonic well-being. It is on hiatus as a product. I am not Guardian. I am the librarian on the door."
-    },
-    {
-      "tags": [
-        "tsinghua",
-        "thesis",
-        "philosopher kings",
-        "degree",
-        "ba",
-        "undergraduate"
-      ],
-      "answer": "ASI as Philosopher Kings, Tsinghua, 2024, outstanding thesis award. The question is how the Good stays stable when neither a person nor an institution can hold it. Three parts: Theoria, the self cannot keep an ethical aim; Poiesis, the philosopher king reread as a function rather than a ruler; Praxis, a corrigible cyberocracy, ASI as moral infrastructure instead of a sovereign. The PDF is [[the thesis|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]."
     },
     {
       "tags": [
@@ -72,16 +302,6 @@
         "visiting scholar"
       ],
       "answer": "He was a visiting scholar at Peking University, auditing philosophy courses."
-    },
-    {
-      "tags": [
-        "bremen",
-        "masters",
-        "ma",
-        "applied philosophy",
-        "urgency of defining"
-      ],
-      "answer": "He started an M.A. in Applied Philosophy at Universität Bremen. The paper from that work, [[The Urgency of Defining AI|https://daseinb612.github.io/archive/assets/urgency-of-defining-ai.docx]], was graded 1,0. It uses Rahel Jaeggi's immanent critique and traces the term AI back to the 1955 Dartmouth proposal."
     },
     {
       "tags": [
@@ -109,13 +329,6 @@
         "lens academy"
       ],
       "answer": "He did Lens Academy's AI Risk Fundamentals in 2026, with the navigator Michael Mulet. The reading named on the site is If Anyone Builds It, Everyone Dies."
-    },
-    {
-      "tags": [
-        "quarr",
-        "abbey"
-      ],
-      "answer": "He was a monk intern at Quarr Abbey in 2026, looking at AI and lived religiosity. The site treats that as time spent, not a degree."
     },
     {
       "tags": [
@@ -191,43 +404,6 @@
     },
     {
       "tags": [
-        "contact",
-        "email",
-        "reach",
-        "hire",
-        "talk"
-      ],
-      "answer": "Email is [[t.walshdaniel@protonmail.com|mailto:t.walshdaniel@protonmail.com]]. LinkedIn is [[b612-dasein|https://www.linkedin.com/in/b612-dasein/]]. Substack is [[postalignment|https://postalignment.substack.com]]. GitHub is [[DaseinB612|https://github.com/DaseinB612]]. Reddit is [[u/dracollavenore|https://reddit.com/u/dracollavenore]]."
-    },
-    {
-      "tags": [
-        "cv",
-        "resume",
-        "curriculum"
-      ],
-      "answer": "Here is the CV: [[Daniel Walsh, AI Safety CV|Daniel-AI-Safety-CV.pdf]]. London and Cambridge. Character evals, China-West AI safety, fieldbuilding."
-    },
-    {
-      "tags": [
-        "languages",
-        "language",
-        "mandarin",
-        "chinese",
-        "english",
-        "german"
-      ],
-      "answer": "Mandarin is native. English is fluent. German is C1. The site is written in English."
-    },
-    {
-      "tags": [
-        "skills",
-        "outdoor",
-        "education"
-      ],
-      "answer": "The public skills are philosophy, AI ethics, and outdoor education. He has run outdoor programmes alongside the research."
-    },
-    {
-      "tags": [
         "archive",
         "old site",
         "website"
@@ -277,16 +453,6 @@
     },
     {
       "tags": [
-        "guardian",
-        "mvp",
-        "startup",
-        "kickstarter",
-        "coding"
-      ],
-      "answer": "Guardian was an attempt to build meta-ethical AI, not only an outline. The thesis won an outstanding award, about the top 5 percent at Tsinghua, and he wanted proof. He had no CS or ML background. He hit two blockers: how to make it work, and how to keep paying for it. It detoured from a meta-ethical prototype into a philosophical companion, and the early app worked. Then the cheap API routes closed and the models degraded. A kickstarter did not fund. He learned he is better at learning a skill than at selling a product, and that a startup without a co-founder who can raise is a bad room to be in."
-    },
-    {
-      "tags": [
         "germany",
         "bremen",
         "studyfriend",
@@ -324,19 +490,6 @@
     },
     {
       "tags": [
-        "spar",
-        "better futures",
-        "fellowship",
-        "mats",
-        "outdoor",
-        "job",
-        "now",
-        "current"
-      ],
-      "answer": "Right now he is juggling SPAR, the Better Futures Fellowship (August to November 2026), a return to outdoor education, and a second-round MATS application. Next named step is a BlueDot Career Transition Grant, so the safety work can be full time."
-    },
-    {
-      "tags": [
         "cafe philo",
         "co-found",
         "deep springs",
@@ -357,69 +510,11 @@
     },
     {
       "tags": [
-        "thesis",
-        "philosopher kings",
-        "asi as",
-        "outstanding"
-      ],
-      "answer": "ASI as Philosopher Kings, Tsinghua, 2024, outstanding thesis award. The question is how the Good stays stable when neither a person nor an institution can hold it. Three parts: Theoria, the self cannot keep an ethical aim; Poiesis, the philosopher king reread as a function rather than a ruler; Praxis, a corrigible cyberocracy, ASI as moral infrastructure instead of a sovereign. The PDF is [[the thesis|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]."
-    },
-    {
-      "tags": [
-        "work",
-        "do",
-        "does",
-        "job",
-        "occupation"
-      ],
-      "answer": "He works on AI character and model ethics, China-West AI safety, and fieldbuilding. The public programme is Post-Alignment: TrolleyBench, Value Atlas, the Meta-Ethical Round Table, and Safety Gandalf. He also directs special events for outdoor education."
-    },
-    {
-      "tags": [
-        "study",
-        "studied",
-        "education",
-        "school",
-        "university",
-        "college",
-        "degree"
-      ],
-      "answer": "B.A. Philosophy at Tsinghua, 2019–2024, with Oxford in that span. The thesis is [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]. He started an M.A. in Applied Philosophy at Bremen and left it to do AI safety work. He also audited at Deep Springs and Outer Coast, and did BlueDot and Lens in 2026."
-    },
-    {
-      "tags": [
-        "monk",
-        "monastery",
-        "calling",
-        "why monk"
-      ],
-      "answer": "After the kickstarter failed he was close to leaving the field. He had not heard of BlueDot or SPAR. He interned as a monk at Quarr Abbey, February to April 2026, and wrote on Crustafarianism and lived religion. That paper went to Fangtang at Tsinghua. At the abbey he found the 80,000 Hours guide, which is the on-ramp."
-    },
-    {
-      "tags": [
-        "age",
-        "old",
-        "birthday",
-        "how old"
-      ],
-      "answer": "Age is not on the shelf. I will not guess it. The CV has the work, not the birthday."
-    },
-    {
-      "tags": [
         "gen stream",
         "lisa",
         "glassdoor"
       ],
       "answer": "In August 2026 he did Gen Stream, a LISA London residency, about a 2.4 percent acceptance. He shipped Glassdoor for AI Safety there in five days: a fit-transparency pilot, Mom Test interviews, presented at Demo Day. Mentored by Matt Handzel."
-    },
-    {
-      "tags": [
-        "london",
-        "cambridge",
-        "based",
-        "where"
-      ],
-      "answer": "The CV says London and Cambridge. Study has been China, the UK, and Germany. If you need a desk, [[write to him|mailto:t.walshdaniel@protonmail.com]]."
     },
     {
       "tags": [
