@@ -298,7 +298,9 @@ function loop(now) {
       recover();
     }
   }
-  requestAnimationFrame(loop);
+  POSES.forEach(p => { const img = new Image(); img.src = p.src; });
+["assets/heap.png","assets/pose.png","assets/dust.png","assets/cloud.png"].forEach(src => { const img = new Image(); img.src = src; });
+requestAnimationFrame(loop);
 }
 requestAnimationFrame(loop);
 
