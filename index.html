@@ -205,6 +205,11 @@
   #chapters a.dusk { background:#3d6ea8; }
   #chapters a.ink { background:#24324a; }
 
+
+  #tome .frame { position:absolute; inset:-7% -4%; width:108%; height:114%; z-index:5; pointer-events:none; }
+  #tome .quill { position:absolute; width:210px; right:-28px; bottom:-46px; z-index:6; pointer-events:none; transform:rotate(8deg); }
+  #tome .page.left, #tome .page.right { box-shadow: inset 0 0 40px rgba(120,80,30,.18); }
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet"></head>
 <body>
@@ -225,9 +230,9 @@
   </div>
 </div>
 <div id="journal">
-  <div id="tome" class="badges">
+  <div id="tome" class="badges"><img class="frame" src="assets/book-frame.png" alt="">
     <div class="dfable">DanielFable</div>
-    <svg class="quill" viewBox="0 0 120 160" aria-hidden="true"><path d="M96 8c-8 28-30 48-52 62 8 6 14 16 16 28-22-6-40-2-54 14 18 2 32 10 40 24-16 6-28 20-32 38 22-8 40-8 54 2-2-20 6-36 22-48 10 6 16 16 18 28 2-22-2-40-14-56 16-18 26-40 22-68z" fill="#4d5560"/><path d="M40 96c8 10 14 22 16 36" stroke="#c7b48a" stroke-width="3" fill="none"/></svg>
+    
     <div class="spread">
       <div class="page left">
         <p class="kicker">The fable so far</p>
@@ -241,7 +246,7 @@
       <div class="spine"></div>
       <div class="page right">
         <p class="kicker">Happening now</p>
-        <h2>Daniel's<br>Book<br>of Logs</h2>
+        <h2>Daniel's<br>Book<br>of Logs</h2><img class="quill" src="assets/quill.png" alt="">
       </div>
     </div>
     <div class="spread" hidden>
@@ -270,15 +275,21 @@
       </div>
     </div>
     <div class="spread" hidden>
-      <div class="page left" style="grid-column:1 / -1; border-radius:18px;">
-        <p class="kicker">Schools and courses</p>
-        <div class="grid schools">
+      <div class="page left">
+        <p class="kicker">Schools</p>
+        <div class="grid">
           <a class="badge" href="archive/"><img src="archive/assets/images/tsinghua.webp" alt=""><span>Tsinghua<br>B.A.</span></a>
           <a class="badge" href="archive/"><img src="archive/assets/images/oxford.svg" alt=""><span>Oxford<br>exchange</span></a>
           <a class="badge" href="archive/"><img src="archive/assets/images/pku.webp" alt=""><span>Peking<br>visiting</span></a>
           <a class="badge" href="archive/"><img src="archive/assets/images/bremen.png" alt=""><span>Bremen<br>2025–26</span></a>
           <a class="badge" href="archive/"><img src="archive/assets/images/deepsprings.jpeg" alt=""><span>Deep Springs<br>2024</span></a>
           <a class="badge" href="archive/"><img src="archive/assets/images/outercoast.png" alt=""><span>Outer Coast<br>audited</span></a>
+        </div>
+      </div>
+      <div class="spine"></div>
+      <div class="page right">
+        <p class="kicker">Courses</p>
+        <div class="grid">
           <a class="badge" href="archive/"><img src="archive/assets/images/bluedot.jpeg" alt=""><span>BlueDot<br>2026</span></a>
           <a class="badge" href="archive/"><img src="archive/assets/images/lens.png" alt=""><span>Lens<br>2026</span></a>
           <a class="badge" href="archive/"><b>Q</b><span>Quarr Abbey<br>2026</span></a>
