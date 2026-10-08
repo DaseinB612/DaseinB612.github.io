@@ -245,6 +245,117 @@
         "china"
       ],
       "answer": "The public site does not pin a city. He has studied in China, the UK, and Germany, and the work is aimed at both. If you need a place, ask him. I only keep what is on the shelf."
+    },
+    {
+      "tags": [
+        "journey",
+        "story",
+        "how did you start",
+        "origin",
+        "2022",
+        "safety journey"
+      ],
+      "answer": "The AI safety journey started around 2022, with the thesis ASI as Philosopher Kings. He was more optimistic then: if AI was going to pass us at other things, it might become a more competent moral judge too. Humans were not willing to let AI co-develop morality. Values were loaded from the top down. Self-driving cars made the cost of that obvious, and that is how he landed on the value-loading problem."
+    },
+    {
+      "tags": [
+        "value loading",
+        "meta-ethics",
+        "meta ethical",
+        "moral progress",
+        "first principles"
+      ],
+      "answer": "His bet was that an AI trusted as a moral co-author would need meta-ethics, not just a recitation of current theories. An intuition for moral progress, and a grip on first principles, so it would not lock in brittle human values. As a philosopher he wanted evidence, not only an outline. He went looking for experimental signs of meta-ethical capacity, and found some, partly."
+    },
+    {
+      "tags": [
+        "chalmers",
+        "double-aspect",
+        "green",
+        "functionalism",
+        "brain"
+      ],
+      "answer": "The 2024 paper defended a possible meta-ethical capacity with Chalmers' double-aspect theory and Green et al. on brain areas that track different ethical problems. He now says he could have waited and pointed at newer ethics benchmarks, where frontier models are close to philosophers without sweeping the floor. If that data had existed then, he might not have built Guardian."
+    },
+    {
+      "tags": [
+        "guardian",
+        "mvp",
+        "startup",
+        "kickstarter",
+        "coding"
+      ],
+      "answer": "Guardian was an attempt to build meta-ethical AI, not only an outline. The thesis won an outstanding award, about the top 5 percent at Tsinghua, and he wanted proof. He had no CS or ML background. He hit two blockers: how to make it work, and how to keep paying for it. It detoured from a meta-ethical prototype into a philosophical companion, and the early app worked. Then the cheap API routes closed and the models degraded. A kickstarter did not fund. He learned he is better at learning a skill than at selling a product, and that a startup without a co-founder who can raise is a bad room to be in."
+    },
+    {
+      "tags": [
+        "germany",
+        "bremen",
+        "studyfriend",
+        "scholarship",
+        "marxism",
+        "dropout",
+        "left"
+      ],
+      "answer": "He went to Germany for the philosophy, the praktikum, and the free tuition. German, from scratch to C1 in about ten months, was the hard part. The programme was not what had been advertised, and the bureaucracy stalled him. Unless he specialised in Marxism, he was not going to finish in two or three years, and the savings would not last. He was on a StudyFriend arrangement, had already paid rent and a Semesterticket, and put the rest of the runway into working alone. He unenrolled from everything except the paper The Urgency of Defining AI."
+    },
+    {
+      "tags": [
+        "monastery",
+        "quarr",
+        "monk",
+        "calling",
+        "crustafarianism",
+        "island"
+      ],
+      "answer": "After the kickstarter failed he was close to leaving AI safety. He had not heard of BlueDot or SPAR. There was no AI safety group at the university, or in the state. He went to a monastery on an island and interned as a monk for two months: prayer, wood, weeding, the library, the cloisters. Between that he talked with the monks and wrote on Crustafarianism, and on what working with AI had shown him about religion. A later version of that paper was a journal submission and got him invited to Tsinghua's Fangtang AI4H forum."
+    },
+    {
+      "tags": [
+        "80000",
+        "80k",
+        "80,000 hours",
+        "navigation",
+        "quest",
+        "bluedot",
+        "slack",
+        "gen stream",
+        "lisa"
+      ],
+      "answer": "At the monastery he found the 80,000 Hours career guide. That led to a call with AI Safety Quest, then with 80k, then to BlueDot. He was rejected until he was accepted, and rejected again later. His first mentor, whom he later saw at LISA, came from there. The BlueDot Slack is where he found Gen Stream, which is what actually sped the journey up. He now treats Slack as the real gate."
+    },
+    {
+      "tags": [
+        "spar",
+        "better futures",
+        "fellowship",
+        "mats",
+        "outdoor",
+        "job",
+        "now",
+        "current"
+      ],
+      "answer": "Right now he is juggling SPAR, the Better Futures Fellowship, a full-time return to outdoor education, and a second-round MATS application. The on-ramp was recent. The thesis was 2022. The monastery, the 80k guide, and the BlueDot Slack were the first real door, a few months ago."
+    },
+    {
+      "tags": [
+        "cafe philo",
+        "co-found",
+        "deep springs",
+        "outer coast",
+        "milestones"
+      ],
+      "answer": "Other milestones he counts: co-founding Cafe Philo at Tsinghua, the projects after Guardian stalled, and the time at Deep Springs and Outer Coast. He does not claim each one was necessary. He does say they signposted the skills."
+    },
+    {
+      "tags": [
+        "next",
+        "grant",
+        "career transition",
+        "ctg",
+        "plans"
+      ],
+      "answer": "The next step he has named is a BlueDot Career Transition Grant, so he can work on AI safety full time. He has said he might go quiet while that is in. He has also said that the last time he said that, three posts followed."
     }
   ]
 }
