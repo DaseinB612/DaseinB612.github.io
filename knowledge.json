@@ -113,9 +113,7 @@
     {
       "tags": [
         "quarr",
-        "abbey",
-        "monk",
-        "religion"
+        "abbey"
       ],
       "answer": "He was a monk intern at Quarr Abbey in 2026, looking at AI and lived religiosity. The site treats that as time spent, not a degree."
     },
@@ -207,7 +205,7 @@
         "resume",
         "curriculum"
       ],
-      "answer": "The CV is [[this PDF|https://daseinb612.github.io/archive/assets/Daniel_Walsh_CV_2026.pdf]]. The book has a badge for it too."
+      "answer": "Here is the CV: [[Daniel Walsh, AI Safety CV|Daniel-AI-Safety-CV.pdf]]. London and Cambridge. Character evals, China-West AI safety, fieldbuilding."
     },
     {
       "tags": [
@@ -234,7 +232,7 @@
         "old site",
         "website"
       ],
-      "answer": "The older site lives at /archive/. Writing, projects, and contact are there. This page is the door. The book is how you get through it."
+      "answer": "The previous site lives at /archive/. Writing, projects, and contact are there. This page is the door. The book is how you get through it."
     },
     {
       "tags": [
@@ -335,7 +333,7 @@
         "now",
         "current"
       ],
-      "answer": "Right now he is juggling SPAR, the Better Futures Fellowship, a full-time return to outdoor education, and a second-round MATS application. The on-ramp was recent. The thesis was 2022. The monastery, the 80k guide, and the BlueDot Slack were the first real door, a few months ago."
+      "answer": "Right now he is juggling SPAR, the Better Futures Fellowship (August to November 2026), a return to outdoor education, and a second-round MATS application. Next named step is a BlueDot Career Transition Grant, so the safety work can be full time."
     },
     {
       "tags": [
@@ -365,6 +363,63 @@
         "outstanding"
       ],
       "answer": "The thesis is [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]], 2024, written at Tsinghua. It won an outstanding thesis award. The claim is that the philosopher king is a constitutional architecture, not a human ruler."
+    },
+    {
+      "tags": [
+        "work",
+        "do",
+        "does",
+        "job",
+        "occupation"
+      ],
+      "answer": "He works on AI character and model ethics, China-West AI safety, and fieldbuilding. The public programme is Post-Alignment: TrolleyBench, Value Atlas, the Meta-Ethical Round Table, and Safety Gandalf. He also directs special events for outdoor education."
+    },
+    {
+      "tags": [
+        "study",
+        "studied",
+        "education",
+        "school",
+        "university",
+        "college",
+        "degree"
+      ],
+      "answer": "B.A. Philosophy at Tsinghua, 2019–2024, with Oxford in that span. The thesis is [[ASI as Philosopher Kings|https://daseinb612.github.io/archive/assets/asi-philosopher-kings.pdf]]. He started an M.A. in Applied Philosophy at Bremen and left it to do AI safety work. He also audited at Deep Springs and Outer Coast, and did BlueDot and Lens in 2026."
+    },
+    {
+      "tags": [
+        "monk",
+        "monastery",
+        "calling",
+        "why monk"
+      ],
+      "answer": "After the kickstarter failed he was close to leaving the field. He had not heard of BlueDot or SPAR. He interned as a monk at Quarr Abbey, February to April 2026, and wrote on Crustafarianism and lived religion. That paper went to Fangtang at Tsinghua. At the abbey he found the 80,000 Hours guide, which is the on-ramp."
+    },
+    {
+      "tags": [
+        "age",
+        "old",
+        "birthday",
+        "how old"
+      ],
+      "answer": "Age is not on the shelf. I will not guess it. The CV has the work, not the birthday."
+    },
+    {
+      "tags": [
+        "gen stream",
+        "lisa",
+        "glassdoor"
+      ],
+      "answer": "In August 2026 he did Gen Stream, a LISA London residency, about a 2.4 percent acceptance. He shipped Glassdoor for AI Safety there in five days: a fit-transparency pilot, Mom Test interviews, presented at Demo Day. Mentored by Matt Handzel."
+    },
+    {
+      "tags": [
+        "london",
+        "cambridge",
+        "based",
+        "where"
+      ],
+      "answer": "The CV says London and Cambridge. Study has been China, the UK, and Germany. If you need a desk, [[write to him|mailto:t.walshdaniel@protonmail.com]]."
     }
   ]
 }
