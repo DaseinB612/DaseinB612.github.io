@@ -601,23 +601,6 @@ function paintLine() {
   }
   lineEl.appendChild(document.createTextNode(text.slice(last).replace(/\[\[[^\]]*$/, "")));
   const c = document.createElement("i"); c.id = "cursor"; lineEl.appendChild(c);
-  return;
-  const unused = fullText.slice(0, shown);
-  const word = "contact";
-  const at = fullText.indexOf(word);
-  if (at >= 0 && shown >= at + word.length) {
-    lineEl.appendChild(document.createTextNode(text.slice(0, at)));
-    const a = document.createElement("a");
-    a.href = "mailto:t.walshdaniel@protonmail.com";
-    a.className = "mail";
-    a.textContent = word;
-    a.addEventListener("click", ev => ev.stopPropagation());
-    lineEl.appendChild(a);
-    lineEl.appendChild(document.createTextNode(text.slice(at + word.length)));
-  } else {
-    lineEl.appendChild(document.createTextNode(text));
-  }
-  const c = document.createElement("i"); c.id = "cursor"; lineEl.appendChild(c);
 }
 function say(text, pose) {
   fullText = text; shown = 0; typing = true; winked = false; advance.textContent = "";
