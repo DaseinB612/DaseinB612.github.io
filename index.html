@@ -112,7 +112,7 @@
     box-shadow: 0 0 0 3px #e7c56a, 0 12px 28px rgba(0,0,0,.35);
     padding:22px 22px 16px; min-height:156px; z-index:8; display:none;
   }
-  #line { font-size:34px; line-height:1.15; min-height:78px; }
+  #line { font-size:34px; line-height:1.15; min-height:78px; max-height:132px; overflow:hidden; }
   #name {
     position:absolute; top:-14px; left:16px; background:#10203a; color:#e7c56a;
     font-family:"Silkscreen", monospace; font-size:11px; letter-spacing:.14em; padding:4px 8px; border-radius:3px;
@@ -602,8 +602,24 @@ function paintLine() {
   lineEl.appendChild(document.createTextNode(text.slice(last).replace(/\[\[[^\]]*$/, "")));
   const c = document.createElement("i"); c.id = "cursor"; lineEl.appendChild(c);
 }
+let pages = [], pageIndex = 0;
+function paginate(text) {
+  const limit = 170;
+  const bits = text.split(/(?<=[.!?])\s+/);
+  const out = [];
+  let cur = "";
+  for (const bit of bits) {
+    if ((cur + " " + bit).trim().length > limit && cur) { out.push(cur.trim()); cur = bit; }
+    else cur = (cur + " " + bit).trim();
+  }
+  if (cur) out.push(cur.trim());
+  return out.length ? out : [text];
+}
 function say(text, pose) {
-  fullText = text; shown = 0; typing = true; winked = false; advance.textContent = "";
+  pages = paginate(text); pageIndex = 0; sayPage(pose);
+}
+function sayPage(pose) {
+  fullText = pages[pageIndex]; shown = 0; typing = true; winked = false; advance.textContent = "";
   if (typeof pose === "number") talkPose(TALK_POSES[pose] || "assets/line-book.png");
   else if (pose) talkPose(pose);
   clearInterval(timer);
@@ -625,6 +641,10 @@ function finishLine() {
   maybeWink();
 }
 function nextLine() {
+  if (phase === "play" && pages.length && pageIndex < pages.length - 1) {
+    if (typing) { finishLine(); return; }
+    pageIndex++; sayPage(); return;
+  }
   if (phase !== "talk") return;
   if (typing) { finishLine(); return; }
   lineIndex++;
@@ -975,6 +995,13 @@ window.addEventListener("keydown", e => {
   if (e.target.tagName === "INPUT") return;
   if (phase === "fall") land();
   else if (phase === "talk") nextLine();
+  else if (phase === "play" && pages.length) {
+    if (e.key === "x" || e.key === "X" || e.key === "Escape") {
+      pages = []; pageIndex = 0; lineEl.textContent = ""; advance.textContent = "";
+      document.getElementById("ask").focus(); return;
+    }
+    if (e.key === "o" || e.key === "O" || e.key === "Enter" || e.key === " ") nextLine();
+  }
 });
 window.addEventListener("pointerdown", e => {
   if (e.target.closest("#dock")) return;
