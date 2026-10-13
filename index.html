@@ -623,11 +623,8 @@ function say(text, pose) {
 function hint() {
   const el = document.getElementById("hint");
   if (!el) return;
-  if (phase === "play" && pages.length > 1 && pageIndex < pages.length - 1) {
-    el.textContent = "O continue    X stop    or type a different question";
-  } else if (phase === "play") {
-    el.textContent = "or type a different question";
-  } else el.textContent = "";
+  const more = phase === "play" && pages.length > 1 && pageIndex < pages.length - 1;
+  el.textContent = more ? "O continue    X stop    or type a different question" : "";
 }
 function sayPage(pose) {
   fullText = pages[pageIndex]; shown = 0; typing = true; winked = false; advance.textContent = "";
@@ -1004,21 +1001,28 @@ document.getElementById("ask").addEventListener("keydown", e => {
   if (e.key === "Enter") { e.stopPropagation(); document.getElementById("ask-btn").click(); }
 });
 window.addEventListener("keydown", e => {
+  const more = phase === "play" && pages.length > 1 && pageIndex < pages.length - 1;
+  const ask = document.getElementById("ask");
+  if (more && (e.key === "o" || e.key === "O" || e.key === "Enter" || e.key === " ")) {
+    if (e.target === ask && ask.value.trim() && e.key !== "Enter") return;
+    e.preventDefault();
+    if (typing) finishLine(); else { pageIndex++; sayPage(); }
+    return;
+  }
+  if (more && (e.key === "x" || e.key === "X" || e.key === "Escape")) {
+    e.preventDefault();
+    pages = []; pageIndex = 0; lineEl.textContent = ""; advance.textContent = ""; hint();
+    ask.focus(); return;
+  }
   if (e.target.tagName === "INPUT") return;
   if (phase === "fall") land();
   else if (phase === "talk") nextLine();
-  else if (phase === "play" && pages.length) {
-    if (e.key === "x" || e.key === "X" || e.key === "Escape") {
-      pages = []; pageIndex = 0; lineEl.textContent = ""; advance.textContent = "";
-      document.getElementById("ask").focus(); return;
-    }
-    if (e.key === "o" || e.key === "O" || e.key === "Enter" || e.key === " ") nextLine();
-  }
 });
 window.addEventListener("pointerdown", e => {
-  if (e.target.closest("#dock")) return;
+  if (e.target.closest("#dock") || e.target.closest("a")) return;
   if (phase === "fall") land();
   else if (phase === "talk") nextLine();
+  else if (phase === "play" && pages.length > 1 && pageIndex < pages.length - 1) nextLine();
 });
 fetch("knowledge.json").then(r => r.json()).then(d => knowledge = d).catch(() => {
   knowledge = { facts: [{ tags: ["daniel","who"], answer: "Catalogue file missing. Independent AI ethicist, Post-Alignment, Tsinghua thesis, Guardian." }] };
