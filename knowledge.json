@@ -194,7 +194,7 @@
         "funding",
         "companion"
       ],
-      "answer": "Guardian was his attempt at meta-ethical AI, September 2022 to February 2026. He pitched it at startup events, raised about 20 percent of the ask, and it did not fund. The scope had outgrown him. He allows the early data may only have been promising to him. The core engine survived as the Meta-Ethical Round Table.",
+      "answer": "Guardian was his attempt at meta-ethical AI, September 2022 to February 2026. He went from no coding to a deployed app. He pitched it, raised about 20 percent of the ask, and it did not fund. He allows the early data may only have been promising to him. The core engine survived as the Meta-Ethical Round Table.",
       "id": "guardian",
       "aliases": [],
       "updated": "2026-10",
@@ -295,7 +295,7 @@
         "glassdoor",
         "four days"
       ],
-      "answer": "Gen Stream was the accelerator, LISA London, August 2026, about a 2.4 percent acceptance. He was matched to a fit-infrastructure brief. Monday's plan died in the kickoff call. He pivoted within 24 hours, turned the mentor's fragments into Glassdoor for AI Safety, and shipped it in the remaining four days. That is the ownership story he tells.",
+      "answer": "Gen Stream, August 2026, a LISA London residency, about a 2.4 percent acceptance. He took a problem from the ecosystem, talent leakage, reframed the brief, and shipped Glassdoor for AI Safety in a five-day sprint: Mom Test interviews, a privacy pipeline rebuilt after about 30 percent withdrew consent, a second batch at zero, a live site, and a Demo Day pitch. The lesson he quotes: people consent in the abstract and withdraw in the concrete. In a field this small, even scrubbed words carry fingerprints. Mentored by Matt Handzel.",
       "id": "gen-stream",
       "aliases": [],
       "updated": "2026-10",
@@ -316,9 +316,10 @@
     {
       "tags": [
         "spar",
-        "research taste"
+        "research taste",
+        "current research"
       ],
-      "answer": "SPAR is where he is practising research taste.",
+      "answer": "SPAR is where he is practising research taste, concretely by extending the TrolleyBench character-evals work on how frontier models reason morally.",
       "id": "spar",
       "aliases": [],
       "updated": "2026-10",
@@ -327,9 +328,10 @@
     {
       "tags": [
         "mats",
+        "accelerator",
         "residency"
       ],
-      "answer": "MATS is the long residency he is aiming at, the long version of Gen Stream. Whether he is in it is not on the shelf. Ask him.",
+      "answer": "MATS is the long version of Gen Stream, a final accelerator. Whether he is in it is not on the shelf. Applications move faster than I update. Ask him.",
       "id": "mats",
       "aliases": [],
       "updated": "2026-10",
@@ -374,7 +376,7 @@
         "hire",
         "when"
       ],
-      "answer": "On contract for outdoor education until November. Available for AI safety work otherwise, as soon as the fit is real. He does not want a leap at whatever is open. British citizen, right to live and work in the UK. He does not expect a US visa to be a serious obstacle.",
+      "answer": "The outdoor education contract runs until November 2026. After that he is available for AI safety work as soon as the fit is real. He does not want a leap at whatever is open. For the exact week, ask him. British citizen, right to live and work in the UK. He does not expect a US visa to be a serious obstacle.",
       "id": "available",
       "aliases": [],
       "updated": "2026-10",
@@ -408,16 +410,20 @@
     {
       "tags": [
         "post-alignment",
-        "post alignment",
-        "alignment",
-        "framework",
-        "work",
-        "focus",
-        "research"
+        "research",
+        "moonshot",
+        "lead",
+        "direction",
+        "co-author",
+        "socratic"
       ],
-      "answer": "Post-Alignment is his current focus. The claim is that AI systems should co-author their own ethical specifications through Socratic dialogue, aimed at objective moral truth rather than a freeze-frame of human preferences. He treats it as a complement to existing alignment work, not a replacement.",
+      "answer": "The direction he is most excited to lead is whether AI systems could co-author their own ethical specifications through Socratic dialogue. He sees it as the extension of the character-evals work. Alignment to a reflexive process, rather than to a freeze-frame of values, avoids lock-in, and co-authorship already implies oversight, because there is no co-authorship without the other. He says it needs independent, dedicated effort. Moral character is a continuous study, and a group already filtered to think the same will not produce the new idea. A documented instance of the method is [[Crustafarianism|https://daseinb612.github.io/archive/assets/crustafarianism.docx]]. He calls the framework young, not proven.",
       "id": "post-alignment",
-      "aliases": [],
+      "aliases": [
+        "coauthor",
+        "research lead",
+        "what would he research"
+      ],
       "updated": "2026-10",
       "status": "current"
     },
@@ -777,8 +783,21 @@
       "updated": "2026-10",
       "status": "current",
       "answer": "Because fuzzy concepts, honesty and character among them, are being treated as engineering targets by people who have not noticed they are contested. Translating them into testable claims is the gap. That is the philosophy."
+    },
+    {
+      "id": "eleos",
+      "tags": [
+        "eleos",
+        "amb",
+        "workshop",
+        "consciousness workshop"
+      ],
+      "aliases": [],
+      "updated": "2026-10",
+      "status": "current",
+      "answer": "He vibecoded an AMB workshop for Eleos, to put people who do and do not believe in AI consciousness in one room, on the shared pragmatics of AI welfare."
     }
   ],
-  "fallback": "That's not on the shelf. I won't guess it. Ask him directly: [[t.walshdaniel@protonmail.com|mailto:t.walshdaniel@protonmail.com]].",
+  "fallback": "That is not on the shelf. He either has not written it down, or it is not mine to give out. Ask him directly: [[email|mailto:t.walshdaniel@protonmail.com]].",
   "updated": "2026-10"
 }
