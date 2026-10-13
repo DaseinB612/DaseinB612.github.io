@@ -887,10 +887,8 @@ function infer(q) {
   const framed = pick([
     card,
     "Pulling that shelf. " + card,
-    "Short version: " + first + ".",
     "The card says: " + card,
-    "Alright. " + card,
-    "Here. " + first + ". Ask if you want the rest."
+    "Alright. " + card
   ]);
   let text = framed;
   if (ranked[1] && ranked[1].n >= ranked[0].n * 0.72 && !framed.startsWith("Short") && !framed.startsWith("Here")) {
