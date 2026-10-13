@@ -119,6 +119,7 @@
   }
   #line a.mail { color:#10203a; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
   #cursor { display:inline-block; width:10px; height:16px; background:#1c140c; margin-left:4px; vertical-align:-2px; animation: blink .7s steps(1) infinite; }
+  #hint .go { color:#2f8a45; } #hint .stop { color:#9a3030; }
   #hint { font-family:"Silkscreen", monospace; font-size:11px; letter-spacing:.04em; color:#6a4420; min-height:16px; margin-top:6px; }
   #advance { position:absolute; right:14px; bottom:8px; font-family:"Silkscreen", monospace; font-size:9px; opacity:.65; }
   #dock { display:none; margin-top:6px; }
@@ -624,12 +625,15 @@ function hint() {
   const el = document.getElementById("hint");
   if (!el) return;
   const more = phase === "play" && pages.length > 1 && pageIndex < pages.length - 1;
-  el.textContent = more ? "O continue    X stop    or type a different question" : "";
+  el.innerHTML = more
+    ? '<span class="go">O continue</span>  <span class="stop">X stop</span>  <span>or type a different question</span>'
+    : "";
 }
 function sayPage(pose) {
   fullText = pages[pageIndex]; shown = 0; typing = true; winked = false; advance.textContent = "";
   if (typeof pose === "number") talkPose(TALK_POSES[pose] || "assets/line-book.png");
   else if (pose) talkPose(pose);
+  else talkPose(TALK_POSES[pageIndex % TALK_POSES.length]);
   clearInterval(timer);
   timer = setInterval(() => {
     const at = fullText.lastIndexOf("wink");
@@ -1011,7 +1015,8 @@ window.addEventListener("keydown", e => {
   }
   if (more && (e.key === "x" || e.key === "X" || e.key === "Escape")) {
     e.preventDefault();
-    pages = []; pageIndex = 0; lineEl.textContent = ""; advance.textContent = ""; hint();
+    pages = []; pageIndex = 0;
+    say("Cool. Let me know if you want to know something else.", "assets/line-hi.png");
     ask.focus(); return;
   }
   if (e.target.tagName === "INPUT") return;
