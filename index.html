@@ -119,6 +119,7 @@
   }
   #line a.mail { color:#10203a; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
   #cursor { display:inline-block; width:10px; height:16px; background:#1c140c; margin-left:4px; vertical-align:-2px; animation: blink .7s steps(1) infinite; }
+  #hint { font-family:"Silkscreen", monospace; font-size:11px; letter-spacing:.04em; color:#6a4420; min-height:16px; margin-top:6px; }
   #advance { position:absolute; right:14px; bottom:8px; font-family:"Silkscreen", monospace; font-size:9px; opacity:.65; }
   #dock { display:none; margin-top:6px; }
   #dock.on { display:flex; gap:8px; }
@@ -257,6 +258,7 @@
   <div id="name">DASEIN</div>
   <div id="line"></div>
   <div id="advance"></div>
+  <div id="hint"></div>
   <div id="dock">
     <input id="ask" placeholder="Ask about Daniel..." autocomplete="off" />
     <button id="ask-btn" type="button">ASK</button>
@@ -618,6 +620,15 @@ function paginate(text) {
 function say(text, pose) {
   pages = paginate(text); pageIndex = 0; sayPage(pose);
 }
+function hint() {
+  const el = document.getElementById("hint");
+  if (!el) return;
+  if (phase === "play" && pages.length > 1 && pageIndex < pages.length - 1) {
+    el.textContent = "O continue    X stop    or type a different question";
+  } else if (phase === "play") {
+    el.textContent = "or type a different question";
+  } else el.textContent = "";
+}
 function sayPage(pose) {
   fullText = pages[pageIndex]; shown = 0; typing = true; winked = false; advance.textContent = "";
   if (typeof pose === "number") talkPose(TALK_POSES[pose] || "assets/line-book.png");
@@ -631,13 +642,14 @@ function sayPage(pose) {
     }
     shown++;
     paintLine();
-    if (shown >= fullText.length) { clearInterval(timer); typing = false; advance.textContent = "▼"; }
+    if (shown >= fullText.length) { clearInterval(timer); typing = false; advance.textContent = "▼"; hint(); }
   }, 26);
 }
 function finishLine() {
   clearInterval(timer); typing = false; shown = fullText.length;
   paintLine();
   advance.textContent = "▼";
+  hint();
   maybeWink();
 }
 function nextLine() {
