@@ -119,7 +119,7 @@
   }
   #line a.mail { color:#10203a; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
   #cursor { display:inline-block; width:10px; height:16px; background:#1c140c; margin-left:4px; vertical-align:-2px; animation: blink .7s steps(1) infinite; }
-  #hint .go { color:#2f8a45; } #hint .stop { color:#9a3030; }
+  #hint .go { color:#2f8a45; } #hint .stop { color:#9a3030; } #hint .ask { color:#1d4e89; }
   #hint { font-family:"Silkscreen", monospace; font-size:11px; letter-spacing:.04em; color:#6a4420; min-height:16px; margin-top:6px; }
   #advance { position:absolute; right:14px; bottom:8px; font-family:"Silkscreen", monospace; font-size:9px; opacity:.65; }
   #dock { display:none; margin-top:6px; }
@@ -626,7 +626,7 @@ function hint() {
   if (!el) return;
   const more = phase === "play" && pages.length > 1 && pageIndex < pages.length - 1;
   el.innerHTML = more
-    ? '<span class="go">O continue</span>  <span class="stop">X stop</span>  <span>or type a different question</span>'
+    ? '<span class="go">O continue</span>  <span class="stop">X stop</span>  <span class="ask">or type a different question</span>'
     : "";
 }
 function sayPage(pose) {
